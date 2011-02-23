@@ -1,0 +1,28 @@
+﻿@model FormHost.Web.Models.FormModel
+           
+@{
+    ViewBag.Title = "Host";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header {
+    <link rel="stylesheet" type="text/css" href="@Model.Content.CSSUrl" />
+    <script type="text/javascript" src="@Model.Content.JavaScriptUrl"></script>
+    @if(!Model.NewForm)
+    {
+        <script type="text/javascript" src="@Url.Action("Field", "Form", new {Id = Model.FillToLoad})"></script>
+    }
+    else
+    {
+        <script type="text/javascript" src="@Url.Action("Empty", "Form")"></script>
+    }
+}
+
+@section form {
+    @using (Html.BeginForm("Save", "Form", Model.NewForm ? (object)new { Id = Model.Content.DocTypeVersion.Id } : (object)new { Id = Model.Content.DocTypeVersion.Id, fillId = Model.FillToLoad }, FormMethod.Post))
+    {
+        <input type="submit" value="Mentés" />
+        @MvcHtmlString.Create(Model.Content.HTML)
+    }
+}
+

@@ -1,0 +1,1385 @@
+@charset "utf-8";
+
+/*
+	Reset
+*/
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}input:focus{outline:none;}
+
+/*
+	Common styles
+*/
+
+a {
+	text-decoration: none;	
+	color: inherit;
+}
+
+a.fir {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	line-height: 200px;
+}
+
+a.fir span {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+span.gallery {
+	display: none;
+}
+
+h1, h2, h3, h4, a.more, .g10, .g12 {
+	font-family: Georgia, "Times New Roman", Times, serif;	
+}
+
+h3.block {
+	color: #444;
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: none;
+	line-height: 24px;
+	padding-bottom: 10px;
+	letter-spacing: 1px;
+	width: 100%;
+}
+
+h3.block span {
+	font-size: 20px;
+	line-height: 24px;
+	color: #b3b3b3;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	padding-left: 8px;
+	text-transform: none;
+	text-shadow: none;
+	font-weight: normal;
+}
+
+div.wrap {
+	width: 960px;	
+	margin: 0 auto;
+}
+
+div.header-gradient {
+	background: #fff;
+}
+
+.clr:after {
+    content: ".";
+    display: block;
+    height: 0;
+	font-size: 1px;
+    clear: both;
+    visibility: hidden;
+}
+
+.break {	
+	word-wrap: break-word;	
+}
+
+.double {
+	color: #666;
+	text-decoration: underline; 
+	border-bottom: 1px solid #999;
+}
+
+.double span {
+	color: #000;	
+}
+
+h3.date {
+	width: 74px;
+	height: 81px;
+	background: #fff;
+	color: #fff;
+	text-shadow: #015a43 0px 1px 0px, #347765 0px 2px 0px;
+}
+
+h3.date small,
+h3.date span,
+h3.date big {
+	display: block;
+	margin-left: 14px;
+	line-height: 14px;
+}
+
+h3.date small {
+	padding-top: 6px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+h3.date span {
+	padding-top: 1px;
+	font-size: 20px;	
+}
+
+h3.date big {
+	padding-top: 3px;
+	font-size: 24px;	
+}
+
+/*
+	Layout
+*/
+
+body {
+	background: #fff;
+	font: 13px/18px Arial, Helvetica, sans-serif;
+}
+
+div#TopBar {
+	display: none;
+}
+
+#Dev, #DevMenu2 {
+	display: none;
+}
+
+/*
+
+*/
+
+div#Header {
+	margin-top: 20px;
+	position: relative;
+}
+
+div#Header h1 {
+	width: 220px;
+	height: 71px;
+	display: block;
+}
+
+div#Header h1 a {
+	width: 100%;
+	height: 100%;
+	line-height: 20px;
+}
+
+div#Header h1 a span img {
+	display: block;
+}
+
+div#Header ul.navigation {
+	display: none;
+}
+
+/*
+	Highlight
+*/
+
+div#Highlight {
+	height: auto;
+	display: block;
+	margin: 0 auto;	
+}
+
+div#Highlight div.wrap {
+	height: 140px;
+	position: relative;
+}
+
+div#Highlight div.articles {
+	width: 100%;
+	height: 140px;
+	background: none;
+}
+
+div#Highlight div.article {
+	width: 100%;
+	height: 140px;
+	display: none;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #40403d;
+}
+
+div#Highlight div.selected {
+	display: block;
+}
+
+div#Highlight div.article div.media {
+	display: none;
+}
+
+div#Highlight div.article h2,
+div#Highlight div.article h3,
+div#Highlight div.article p {
+	margin: 0 0 10px 10px;
+	width: auto;
+	float: left;
+	clear: left;
+}
+
+div#Highlight div.article h2 {
+	color: #063d88;
+	font-size: 24px;
+	line-height: 27px;
+	width: 100%;
+}
+
+div#Highlight div.article h3 {
+	margin-top: 24px;
+	color: #666666;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 20px;
+	width: 100%;	
+}
+
+div#Highlight div.article p {
+	padding: 8px 0 0 0;
+	width: 100%;
+}
+
+div#Highlight div.article-selector {
+	display: none;
+}
+
+/* 
+
+*/
+
+div#Footer {
+	display: none;
+}
+
+/*
+
+*/
+
+div#Page {
+	padding: 0;
+	margin: 0;
+	border-top: none;
+}
+
+div#Page.simple {
+/*	border-top: 0;
+	margin-top: 29px;	*/
+}
+
+div#Page div.column {
+	float: left;
+}
+
+div#Page div#Left {
+	display: none;
+}
+
+div#Page div#Right {
+	display: none;
+}
+
+div#Page div#Content {
+	width: auto;
+	margin: 0px 0px 20px 10px;
+}
+
+div#Page div.two-column div#Content {
+	width: auto;
+	margin: 0 0 0 40px;
+}
+
+/*
+
+*/
+
+div#Page div.tools-box {
+	display: none;
+}
+
+/*
+
+*/
+
+div#Page div#Content.article-list,
+div#Page div#Content.item-list {
+	padding-top: 15px;
+}
+
+div#Page div#Content.article-list div.article,
+div#Page div#Content.item-list div.article {
+	padding: 10px 0 26px 0;	
+}
+
+div#Page div#Content.article-list div#ListEvents div.article,
+div#Page div#Content.item-list div#ListEvents div.article {
+	padding: 10px 0 0px 0;	
+}
+
+div#Page div#Content.article-list div#ListDocuments div.article,
+div#Page div#Content.item-list div#ListDocuments div.article {
+	padding-bottom: 15px;
+}
+
+div#Page div#Content.article-list div#ListRescripts div.article,
+div#Page div#Content.item-list div#ListRescripts div.article {
+	padding-bottom: 15px;
+}
+
+div#Page div#Content.article-list div.article.notop,
+div#Page div#Content.item-list div.article.notop {
+	padding: 0px 0 26px 0;	
+}
+
+div#Page div#Content.article-list div.article div.img-holder,
+div#Page div#Content.item-list div.article div.img-holder {
+	width: 196px;
+	height: 108px;
+	float: left;
+	overflow: hidden;
+	padding: 1px;
+	border: solid #c5c5c4;
+	border-width: 1px;
+	margin: 0 10px 10px 0;
+}
+
+div#Page div#Content.article-list div.article div.img-holder.top,
+div#Page div#Content.item-list div.article div.img-holder.top {
+	margin: 10px 10px 10px 0;
+}
+
+div#Page div#Content.article-list div.article div.img-holder img,
+div#Page div#Content.item-list div.article div.img-holder img {
+	border: 0px;
+	height: 108px;
+}
+
+div#Page div#Content.article-list div.article div.date,
+div#Page div#Content.item-list div.article div.date {
+	width: auto;
+	float: left;
+	padding-left: 0px;
+	margin-right: 22px;
+	background: #fff;
+}
+
+div#Page div#Content.article-list div.article div.date span,
+div#Page div#Content.item-list div.article div.date span {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #191919;
+	font-size: 15px;
+	line-height: 16px;
+	text-align: left;
+	position: relative;
+	float: left;
+	text-shadow: none;
+	padding-right: 10px;
+}
+
+div#Page div#Content.article-list div.article div.event-description,
+div#Page div#Content.item-list div.article div.event-description {
+	float: right;
+	width: 100%;
+	padding: 15px 0 25px 0;
+}
+
+div#Page div#Content.article-list div.article div.sign-up,
+div#Page div#Content.item-list div.article div.sign-up {
+	display: none;
+}
+
+div#Page div#Content.article-list div.article h2,
+div#Page div#Content.item-list div.article h2 {
+	color: #063d88;
+	font-size: 20px;
+	line-height: 26px;
+}
+
+div#Highlight div.article h2 a,
+div#Page div#Content.article-list h2 a,
+div#Page div#Content.item-list div.article h2 a,
+div#Page div#Content div.press-theme-list h4 a {
+	color: #063d88;
+}
+
+div#Highlight div.article h3 a,
+div#Page div#Content.article-list div.article h3 a,
+div#Page div#Content.item-list div.article h3 a,
+div#Page div#Content.article-list h3 a {
+	color: #b3b3b3;
+}
+
+div#Page div#Content.article-list div.article div.event-description h2,
+div#Page div#Content.item-list div.article div.event-description h2 {
+}
+
+div#Page div#Content.item-list div.article div.event-description h2 a.wicon {
+	padding-right: 34px;
+	background: url("sprite_i.png") right -198px no-repeat;
+}
+
+div#Page div#Content.article-list div.article h3,
+div#Page div#Content.item-list div.article h3 {
+	color: #b3b3b3;
+	font-size: 12px;
+	font-style: italic;
+	line-height: 18px;
+}
+
+div#Page div#Content.article-list div.article p,
+div#Page div#Content.item-list div.article p {
+	padding: 7px 0 0 0;
+}
+
+div#Page div#Content.article-list div.article p.top,
+div#Page div#Content.item-list div.article p.top {
+	padding: 16px 0 0 0;
+}
+
+div#Page div#Content.article-list div.article div.event-description span.time ,
+div#Page div#Content.article-list div.article div.event-header span.time ,
+div#Page div#Content.item-list div.article div.event-description span.time {
+	color: #03694e;
+	font-size: 11px;
+	line-height: 20px;
+	font-weight: bold;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+div#Page div#Content div.column-footer {
+	display: none;
+}
+
+body.Press div#Page div#Content.item-list div.article {
+	width: 720px;
+	float: left;
+	clear: both;
+}
+
+body.Press div#Page div#Content.item-list.narrow div.article {
+	width: 480px;
+}
+
+body.Press div#Page div#Content.item-list div.article h2 {
+	color: #282828;	
+}
+
+/* 
+	Error page
+*/
+
+div#Page div#Content.error-message {
+	width: 480px;
+	padding: 0 10px;
+	margin: 11px 230px 21px;
+	color: #40403d;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+div#Page div#Content.error-message h1 {
+	padding: 0 0 65px 0;
+	background: url("sprite_t.png") left bottom no-repeat;
+	font-size: 20px;
+	font-weight: bold;
+	font-style: italic;
+	text-shadow: #fff 0px 1px 0px, #d9d9d8 0px 2px 0px;
+	letter-spacing: 2px;
+}
+
+div#Page div#Content.error-message p {
+	margin-bottom: 20px;	
+}
+
+div#Namecard {
+	display: none;
+	float: left;
+	height: 100px;
+}
+
+
+div#NavBar {
+	display: none;
+	margin: 0;
+	height: 0px;
+	float: left;
+}
+
+/*
+
+*/
+
+div#Page div#Content.article div.article-body h4 {
+	margin: 40px 0 20px 0;
+	color: #191919;
+	font-size: 18px;
+}
+
+div#Page div#Content.article div.article-body div.media {
+	width: 500px;
+	float: left;
+	margin: 10px 10px;	
+}
+
+div#Page div#Content.article div.article-body div.media a {
+	float: left;
+	position: relative;
+	text-decoration: none;
+}
+
+div#Page div#Content.article div.article-body div.media img {
+	float:left;
+	padding: 1px;
+	background: #fff;
+	border: none;
+}
+
+div#Page div#Content.article div.article-body div.media a span.more {
+	display: none;
+}
+
+div#Page div#Content.article div.article-body div.media div.caption {
+	clear: both;
+	width: auto;
+	padding: 7px 80px 10px;
+	margin: 0 2px;
+	background: #fff;
+	color: #808080;
+	font-size: 11px;
+	line-height: 14px;
+	text-align: center;
+}
+
+div#Page div#Content.article div.article-body div.media-half {
+	width: 235px;
+	margin: 4px -10px -4px;	
+}
+
+div#Page div#Content.article div.article-body div.media-half div.caption {
+	width: 215px;
+	padding: 7px 10px 40px;
+	background-position: -1300px bottom;
+}
+
+div#Page div#Content.article div.article-body div.media-third {
+	width: 146px;
+	margin: 4px -10px -4px;
+}
+
+div#Page div#Content.article div.article-body div.media-third div.caption {
+	width: 126px;
+	padding: 7px 10px 40px;
+	background-position: -1533px bottom;
+}
+
+div#Page div#Content.article div.article-body div.media-left {
+	margin-right: 20px;
+	float: left;
+}
+
+div#Page div#Content.article div.article-body div.media-right {
+	margin-left: 20px;
+	float: right;
+}
+
+div#Page div#Content.article div.article-body blockquote {
+	width: 255px;
+	float: right;
+	padding: 1px 0;
+	margin: 5px -10px 20px 20px;
+	border: solid #c5c5c4;
+	border-width: 1px 0;
+}
+
+div#Page div#Content.article div.article-body blockquote > div {
+	padding: 12px 0px 15px;
+	border: solid #ececeb;
+	border-width: 1px 0;
+	color: #40403d;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+div#Page div#Content.article div.article-body blockquote > div span {
+	display: none;
+}
+
+/*
+
+*/
+
+div#Page div#Content div.article-head {
+	margin: 25px 0 25px 0;
+	line-height: 20px;
+}
+
+div#Page div#Content div.article-head h1 {
+	color: #191919;
+	font-size: 24px;
+}
+
+div#Page div.article-head a.print {
+	display: none;
+}
+
+div#Page div#Content div.article-head h4 {
+	margin: 5px 0 0 0;
+	color: #999;
+	font-size: 12px;
+	font-style: italic;
+}
+
+div#Page div#Content div.article-content p {
+	margin: 0 0 20px 0;
+	color: #40403d;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+div#Page div#Content div.article-content p:first-child:first-letter {
+	float: left;
+	margin: 6px 0 0 0;
+	color: #40403d;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 41px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	div#Page div#Content div.article-content p:first-child:first-letter  {
+		margin: 10px 0 0 0;
+	}
+}
+
+div#Page div#Content div.article-content p span.annotation {
+	text-decoration: none;
+}
+
+div#Page div#Content div.article-tools {
+	display: none;
+}
+
+div#Page div#Content div.article-foot {
+	display: none;
+}
+
+div#Page div#Content div.article-body div.related-box dl {
+	display: none;
+}
+
+/*
+
+*/
+
+div#Page div.collection-item {
+	float: left;
+	width: 100%;
+	padding-top: 20px;
+	padding-right: 10px;
+	margin-bottom: 15px;
+	clear: left;
+}
+
+div#Page div.collection-item.odd {
+	margin-right: 40px;
+}
+
+div#Page div.collection-item p {
+	color: #40403d;
+	font-size: 13px;
+	line-height: 18px;
+	margin-bottom: 9px;
+}
+
+div#Page div.collection-item span.words {
+	float: left;
+	clear: left;
+	margin-top: 15px;
+	color: #053d88;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+div#Page div.collection-item span.words a {
+	color: #053d88;
+}
+
+div#Page div.collection-item span.words strong {
+	font-weight: bold;
+	color: #40403d;
+}
+
+div#Page div.collection-item h3 {
+	color: #053d88;
+	font-size: 20px;
+	line-height: 18px;
+	margin-bottom: 12px;
+}
+
+div#Page div.collection-item h3 a {
+	text-decoration: none;
+	color: #053d88;
+}
+
+div#Page div.collection-item h3 a:hover {
+	text-decoration: none;
+}
+
+div#Page div.collection-item a.rss {
+	display: none;
+}
+
+/*
+	Glossary
+*/
+
+div#Page div.glossary {
+	padding-top: 43px;	
+}
+
+div#Page div.four-column.glossary dl {
+	float: left;
+	width: 240px;
+}
+
+div#Page div.four-column.glossary dl dt {
+	float: left;
+	width: 180px;
+	padding: 0 10px;
+	color: #40403d;
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 14px;
+	padding-bottom: 4px;
+	cursor: pointer;
+}
+
+div#Page div.four-column.glossary dl dt:hover {
+	color: #03694e;
+	text-decoration: underline;
+}
+
+div#Page div.four-column.glossary dl dd {
+	display: none;
+}
+
+/*
+
+*/
+
+div.inner-submenu {
+	display: none;
+}
+
+/* 
+	Gallery
+*/
+
+div.gallery div.gallery-content {
+	margin-left: -10px;	
+}
+
+div.gallery div.gallery-content > div {
+	margin-left: 50%;
+	float: left;
+}
+
+div.gallery div.gallery-content a {
+	margin-left: -50%;
+	float: left;
+}
+
+div.gallery div.gallery-content img {
+	padding: 1px;
+	border: 1px solid #ccc;
+	float: left;
+	background: #fff;
+}
+
+div.gallery div.gallery-caption {
+	width: auto;
+	padding: 10px 20px 15px 20px;
+	background: none;
+	color: #808080;
+	font-size: 13px;
+	line-height: 14px;
+	text-align: center;
+}
+
+div.gallery div.gallery-container {
+	display: none;
+}
+
+div.gallery div.gallery-pager {
+	display: none;
+}
+
+div#Page div#Content.gallery div.article-body {
+	margin: 27px 0 0 0;
+	width: auto;
+}
+
+div#Page div#Content.gallery div.article-tools {
+	display: none;
+}
+
+div#Page div#Content.gallery div.article-foot {
+	display: none;
+}
+
+/*
+	Photo & Video lists
+*/
+
+div.item-list div.list-head {
+	margin-bottom: 29px;	
+}
+
+div.item-list div.list-head h1 {
+	float: left;
+	color: #191919;
+	font-size: 24px;
+}
+
+div.item-list div.list-head a.more {
+	margin-right: 10px;
+	float: right;
+	color: #053D88;
+}
+
+div.item-list div.list-head a.more span {
+	background-position: -150px 0;
+}
+
+div.item-list div.list-wrap {
+	width: 730px;
+	margin: 0 0 0 -10px;
+	float: left;
+	clear: left;
+}
+
+div.central-list div.list-wrap {
+	padding-bottom: 39px;
+	margin-bottom: 5px;
+	background: none;
+}
+
+div.item-list div.photo {
+	width: 175px;
+	float: left;
+	margin-left: 10px;
+	padding-bottom: 22px;
+	position: relative;
+	display: block;
+	border: none;
+	z-index: 100;
+}
+
+div.item-list div.photo:first-child {
+	margin-left: 0px;
+}
+
+div.item-list div.photo span {
+	display: none;
+}
+
+div.item-list div.photo .outer {
+	position: relative;
+	z-index: 100;
+	border: none;
+	float: left;
+}
+
+div.item-list div.photo div.img-holder {
+	padding: 1px;
+	border: solid #c5c5c4;
+	border-width: 1px;
+	background-color: #f4f4ef;
+	width: 171px;
+	height: 108px;
+	overflow: hidden;
+}
+
+div.item-list div.photo div.img-holder img {
+	margin-left: -7px;
+}
+
+div.item-list div.photo div.img-holder a {
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	width: 171px;
+	height: 108px;
+	float: left;
+	position: relative;
+}
+
+div.item-list div.photo h2 {
+	margin: 12px 0 0 10px;
+	font-size: 12px;
+	line-height: 20px;
+	color: #999999;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+}
+
+div.item-list div.photo.zoom h2 {
+	width: 150px;
+}
+
+div.item-list div.photo h2 a {
+	font-size: 15px;
+	line-height: 16px;
+	font-weight: normal;
+	color: #053d88;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-decoration: none;
+	display: block;
+	margin-bottom: 11px;
+	font-style: normal;
+}
+
+div.item-list div.photo h2 a:hover {
+	text-decoration: underline;
+}
+
+/*
+	Search Form
+*/
+
+div#SearchForm {
+	display: none;
+}
+
+div#SearchForm div.search-tabs {
+	display: none;
+}
+
+/*
+	SearchTab containers
+*/
+
+body.Search div#Page div.list-tab-container {
+	display: none;
+}
+
+body.Search div#Page div.list-tab-container.active,
+body.Search.VideoListEnd div#Page div.list-tab-container {
+	display: block;
+}
+
+body.Search div#Page div#Content div.column-footer.pager {
+	display: none;
+}
+
+
+div#VideoPlayer a,
+div#VideoPlayer #player-container {
+	display: none;
+}
+
+/*
+	Events table
+*/
+
+div#EventsTable {
+	margin: 26px 0px 26px 0px;
+	display: block;
+	padding: 0 1px;
+	position: relative;
+	width: auto;
+	margin-left: -10px;
+	float: left;
+	background: none;
+}
+
+div#EventsTable ul.week {
+	height: 81px;;
+	position: relative;
+	float: left;
+	margin-left: 1px;
+	margin-right: -1px;
+	overflow: visible !important;
+}
+
+div#EventsTable ul.week.active {
+	height: 100%;
+}
+
+div#EventsTable ul.week li {
+	height: 100%;
+	width: 101px;
+	float: left;
+	padding: 0px 1px;
+	margin: 0 0 0 1px;
+	position: relative;
+}
+
+div#EventsTable ul.week:last-child {
+	margin-bottom: -5px;
+}
+
+div#EventsTable ul.week:last-child li {
+	margin-bottom: 0px;
+}
+
+div#EventsTable ul.week li > a {
+	display: block;
+	float: left;
+	margin: -3px 0 0 0;
+	padding: 0px 7px 0px 7px;
+	margin-bottom: 1px;
+	width: 85px;
+	background: #fff;
+}
+
+div#EventsTable ul.week li a:focus {
+	outline: none;
+}
+
+div#EventsTable ul.week.active li > a {
+    background: #ededec;
+}
+
+div#EventsTable ul.week li.passed > a {
+	background: #fff;
+}
+
+div#EventsTable ul.week li.today > a {
+	background: #cde1dc;
+}
+
+div#EventsTable ul.week.active li.today > a {
+    background: #ededec;
+}
+
+div#EventsTable ul.week li a:hover {
+	text-decoration: none;
+}
+
+div#EventsTable ul.week li a span {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #b3b3b3;
+	font-size: 12px;
+	line-height: 14px;
+	text-align: left;
+	position: relative;
+	float: left;
+	clear: left;
+	cursor: pointer;
+}
+
+div#EventsTable ul.week li.passed a span {
+	color: #b3b3b3;
+	text-shadow: none;
+}
+
+div#EventsTable ul.week li.hasevent a span {
+	color: #191919;
+}
+
+div#EventsTable ul.week li.today a span {
+	color: #03694e;
+	text-shadow: none;
+}
+
+div#EventsTable ul.week li a span.year {
+	font-weight: bold;
+	padding-top: 21px;	
+}
+
+div#EventsTable ul.week li a span.month {
+	font-size: 20px;	
+	line-height: 14px;
+	padding-top: 1px;
+}
+
+div#EventsTable ul.week li a span.day {
+	font-size: 24px;
+	line-height: 17px;
+	padding-top: 3px;
+	padding-bottom: 7px;
+	width: 100%;
+	float: left;
+	height: 22px;
+	margin-bottom: -1px;
+}
+
+div#EventsTable ul.week li a span.dayname {
+	text-shadow: none;
+	display: none;
+	font-style: italic;
+	font-size: 12px;
+	background: none;
+}
+
+div#EventsTable ul.week li.highday a span.day {
+	color: #d71921;
+}
+
+div#EventsTable ul.week li.passed.highday a span.day {
+	color: #b3b3b3;
+}
+
+div#EventsTable ul.week li.highday a span.dayname {
+	color: #d71921;
+}
+
+div#EventsTable ul.week li.passed.highday a span.dayname {
+	color: #b3b3b3;
+}
+
+div#EventsTable ul.week.active li a span.day {
+	border-bottom: 0;
+	background: none;
+	height: 22px;
+}
+
+div#EventsTable ul.week.active li a span.dayname {
+	display: block;
+	width: 100%;
+	float: left;
+	height: 26px;
+}
+
+div#EventsTable ul.week li dl {
+	display: none;
+	margin: 0px 8px 0px 7px;
+	width: 84px;
+	word-wrap: break-word;
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+	float: left;
+}
+
+div#EventsTable ul.week.active li dl {
+	display: block;
+}
+
+div#EventsTable ul.week li dl dt {
+	font-size: 11px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+	line-height: 15px;
+	color: #03694e;
+}
+
+div#EventsTable ul.week li dl dd {
+	font-size: 11px;
+	font-family: Arial;
+	font-weight: normal;
+	line-height: 13px;
+	color: #40403d;
+	margin-bottom: 18px;	
+}
+
+div#EventsTable ul.week li dl dd a {
+	text-decoration: none;
+	color: #40403d;
+	padding: 0;
+	margin: 0;
+	background: #fff;
+	filter: none;
+}
+
+div#EventsTable ul.week li dl dd a:hover {
+	text-decoration: underline;
+}
+
+div#EventsTable ul.week li dl dt span {
+	color: #d71921;
+	font-size: 11px;
+	line-height: 11px;
+	font-weight: bold;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+div#Content div.calendar-pager {
+	display: none;
+}
+
+/*
+	Events end page
+*/
+
+div.event-header {
+	width: 100%;
+	position: relative;
+	padding: 2px;
+	display: block;
+	clear: both;
+	margin: 4px 0px 50px -10px;
+	float: left;
+}
+
+div.event-header .inner {
+	background: #fff;
+}
+
+div#Page div#Content div.article div.event-header .inner h3 {
+	display: none;
+}
+
+div.event-header .inner span.time {
+	padding: 12px 0 0 10px;
+	display: block;
+}
+
+div.event-header .inner span.ministry {
+	padding: 0 0 0 10px;
+	display: block;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #40403d;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+div.event-header .inner span.ministry strong {
+	font-weight: bold;
+}
+
+div.attendance-list {
+	padding-top: 20px;
+	width: auto;
+	margin-left: -10px;
+	clear: both;
+	display: block;
+}
+
+div.attendance-list h2 {
+	padding-left: 10px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	line-height: 20px;
+	color: #191919;
+	margin-bottom: 28px;
+}
+
+div.attendance-list ul {
+	position: relative;
+}
+
+div.attendance-list li {
+	width: 500px;	
+	vertical-align: top;
+	height: 90px;
+	margin-bottom: 15px;
+}
+
+div.attendance-list li img {
+	width: 86px;
+	height: 86px;
+	overflow: hidden;
+	vertical-align: top;	
+	padding: 1px;
+	border: 1px #c8c8c7 solid;
+	position: relative;
+	display: inline;
+}
+
+div.attendance-list li span { 
+	line-height: 18px;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #40403d;
+	width: 390px;
+	display: block;
+	margin-left: 10px;
+	padding-left: 100px;
+	margin-top: -63px;
+	height: 90px;
+}
+
+div.attendance-list li span strong {
+	font-weight: bold;
+	clear: both;
+	width: 390px;
+	display: block;
+}
+
+/*
+
+*/
+
+div.user-box {
+	display: none;
+}
+
+div.question-answer-form {
+	display: none;
+}
+
+/* 
+	Tables
+*/
+
+div#Content table {
+	border-collapse: separate;
+	border: 0px;
+	z-index: 10;
+	position: relative;
+	margin: 20px 0 35px -10px;
+}
+
+div#Content table thead {
+	position: relative;
+	background: #656563;
+	height: auto;
+}
+
+div#Content table td strong {
+	font-weight: bold;
+}
+
+div#Content table thead td {
+	padding: 9px;
+	color: #ffffff;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 11px;
+	line-height: 16px;
+	background: #333333;
+	border: 1px #999999 solid;
+}
+
+div#Content table tbody tr td {
+	padding: 8px 10px;
+	width: 100%;
+	color: #40403d;
+	font-size: 12px;
+	line-height: 16px;
+	font-family: Arial;
+
+	border: 1px #999999 solid;	
+	white-space: nowrap;
+}
+
+div#Content table tr td.center {
+	text-align: center;
+}
+
+div#Content table td.num {
+	text-align: right;
+	padding: 8px;
+}
+
+div#Content table tbody td.num {
+	color: #40403d;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	line-height: 16px;
+}
+#FloatingLayer {
+	display: none;
+}
+
+

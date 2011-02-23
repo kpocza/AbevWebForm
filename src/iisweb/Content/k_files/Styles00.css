@@ -1,0 +1,6912 @@
+@charset "utf-8";
+
+/*
+	Reset
+*/
+html{color:#000;background:#fff;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}input:focus{outline:none;}
+
+/*
+	Common styles
+*/
+
+a {
+	text-decoration: none;	
+	color: inherit;
+}
+
+div#Page div#Content p a {
+	color: #053d88;
+}
+
+div#Page div#Content div#Right p a {
+	color: inherit;	
+}
+
+a:hover {
+	text-decoration: underline;	
+}
+
+a.anchor {
+	font-size: 1px;
+	height: 0;
+	width: 0;
+	display: block;
+    clear: both;
+    visibility: hidden;
+	content: ".";
+}
+
+a.fir {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	line-height: 200px;
+}
+
+a.fir span {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+a.more,
+span.more {
+	margin-left: 24px;
+	font-weight: bold;
+	font-style: italic;	
+}
+
+a.more span,
+span.more span {
+	width: 8px;
+	height: 5px;
+	display: inline-block;
+	padding: 0 6px 0 0;
+	margin: 0 0 0 -14px;
+}
+
+h1, h2, h3, h4, a.more, .g10, .g12 {
+	font-family: Georgia, "Times New Roman", Times, serif;	
+}
+
+h3.block {
+	color: #444;
+	font-size: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: #fff 0px 1px 0px, #d9d9d8 0px 2px 0px;
+	line-height: 12px;
+	letter-spacing: 1px;
+}
+
+h3.block a:hover {
+	text-decoration: none !important;	
+}
+
+h3.block span {
+	font-size: 10px;
+	line-height: 16px;
+	color: #b3b3b3;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	padding-left: 8px;
+	text-transform: none;
+	text-shadow: none;
+	font-weight: normal;
+}
+
+.icon, .icon span, .icon-s span {
+	background: url("sprite_i.png") -275px -75px no-repeat;
+}
+
+a.more span,
+span.more span {
+	background-position: -175px 0;
+}
+
+.g10, a.more {
+	font-size: 10px;
+}
+
+.g12 {
+	font-size: 12px;
+}
+
+div.wrap {
+	width: 960px;	
+	margin: 0 auto;
+}
+
+div.header-gradient {
+	background: #fff url("Header_b.jpg") 0 0 repeat-x;
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e6e6e6));
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#e6e6e6', GradientType=0);		
+}
+
+div#SimpleHeader.header-gradient {
+	background-image: url("Header_b.jpg");
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+}
+
+div#PressMenu.header-gradient {
+	background-image: url("Header_b.jpg");
+}
+
+div#Highlight.header-gradient {
+	background-image: url("Header_b.jpg");
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+}
+
+.clr:after {
+    content: ".";
+    display: block;
+    height: 0;
+	font-size: 1px;
+    clear: both;
+    visibility: hidden;
+}
+
+.break {	
+	word-wrap: break-word;	
+}
+
+.double {
+	color: #666;
+	text-decoration: underline; 
+	border-bottom: 1px solid #999;
+}
+
+.double span {
+	color: #000;	
+}
+
+h3.date {
+	width: 74px;
+	height: 81px;
+	background: url("sprite_g.png") 0 0 no-repeat;
+	color: #fff;
+	text-shadow: #015a43 0px 1px 0px, #347765 0px 2px 0px;
+}
+
+h3.date small,
+h3.date span,
+h3.date big {
+	display: block;
+	margin-left: 14px;
+	line-height: 14px;
+}
+
+h3.date small {
+	padding-top: 6px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+h3.date span {
+	padding-top: 1px;
+	font-size: 20px;	
+}
+
+h3.date big {
+	padding-top: 3px;
+	font-size: 24px;	
+}
+
+/*
+	Common classes for content formatting
+*/
+
+a.more-green, a.more-blue, a.more-red, a.more-grey, a.back {
+	padding-left: 14px;
+	background: url(sprite_j.png) no-repeat !important;
+	color: #000;
+	font-family: Georgia, "Times New Roman", Times, serif;	
+	font-size: 10px;
+	line-height: 14px;
+	font-style: italic;
+	font-weight: bold;
+	text-decoration: none !important;
+}
+
+a.more-green:hover, a.more-blue:hover, a.more-red:hover, a.more-grey:hover, a.back:hover {
+	text-decoration: underline !important;	
+}
+
+a.more-green {
+	background-position: 0 5px !important;	
+	color: #03694e !important;
+}
+
+a.more-blue {
+	background-position: -500px 5px !important;
+	color: #053D88 !important;
+} 
+
+a.more-red {
+	background-position: -1000px 5px !important;	
+	color: #d71921 !important;
+}
+
+a.more-grey {
+	background-position: -1500px 5px !important;	
+	color: #40403d !important;
+}
+
+a.back {
+	background-position: -2000px 5px !important;
+	color: #40403d !important;	
+}
+
+h3.heading1 {
+	color: #40403d !important;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 26px;
+	margin: 0 0 12px 0;
+}
+
+h3.heading2 {
+	margin: 0 0 12px 0;	
+	color: #444;
+	font-size: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: #fff 0px 1px 0px, #d9d9d8 0px 2px 0px;
+	line-height: 12px;
+	letter-spacing: 1px;		
+}
+
+.align-left {
+	float: left;	
+	font-size: 12px !important;
+	margin: 0 20px 12px -10px !important;
+}
+
+.align-right {
+	float: right;	
+	font-size: 12px !important;
+	margin: 0 -10px 12px 20px !important;
+}
+
+.third {
+	width: 146px;
+}
+
+.half {
+	width: 235px;
+}
+
+/*
+	Layout
+*/
+
+body {
+	background: #fff;
+	/*font: 13px/18px Arial, Helvetica, sans-serif;*/
+}
+
+div#TopBar {
+	width: 100%;
+	height: 37px;
+	position: relative;
+	background: #545454;
+}
+
+body.ForProjection div#TopBar {
+	display: none;
+}
+
+div#TopBar div.background-left,
+div#TopBar div.background-right {
+	width: 50%;
+	height: 37px;
+	position: absolute;
+	top: 0;
+	background: url("TopBar00.png") repeat-x;
+}
+
+div#TopBar div.background-left {
+	left: 0;
+	background-position: 0 -37px;
+}
+
+div#TopBar div.background-right {
+	right: 0;	
+	background-position: 0 -74px;
+}
+
+div#TopBar div.topbar {
+	width: 960px;
+	height: 37px;
+	position: absolute;
+	left: 50%;
+	margin-left: -480px;
+	background: url("TopBar00.png") center top no-repeat;
+}
+
+div#TopBar div.topbar div.menu {
+	height: 37px;
+	float: right;
+}
+
+div#TopBar div.topbar ul.menu-2 {
+	margin: 5px 143px 0 0;
+}
+
+body.Eng div#TopBar div.topbar ul.menu-2 {
+	margin: 5px 192px 0 0;
+}
+
+body.Press div#TopBar div.topbar ul.menu-2 {
+	margin: 5px 205px 0 0;
+}
+
+body.Theme-Parliament div#TopBar div.topbar ul.menu-2 {
+	margin-left: 0px;
+}
+
+div#TopBar div.topbar ul.tools {
+	margin-right: -20px;	
+}
+
+div#TopBar div.topbar ul {
+	height: 22px;
+	margin: 5px 0 0 0;
+	float: left;
+}
+
+div#TopBar div.topbar ul li {
+	float: left;	
+	margin: 0 0 0 14px;
+}
+
+div#TopBar div.topbar ul li a {
+	color: #ababab;
+	font-size: 11px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-shadow: #333332 0px 1px 0px;
+}
+
+div#TopBar div.topbar ul li a:hover {
+	color: #c6c6c6;
+}
+
+div#TopBar div.topbar ul li.accessible {
+	margin: 0 0 0 9px;	
+}
+
+div#TopBar div.topbar ul li.accessible a {
+	width: 20px;
+	height: 22px;
+	background: none;
+}
+
+div#TopBar div.topbar ul li.accessible a span {
+	background-position: 0 0;	
+}
+
+div#TopBar div.topbar ul li.accessible a:hover span {
+	background-position: -25px 0;
+}
+
+div#TopBar div.topbar ul li.search form {
+	width: 180px;
+	height: 22px;
+	border: 1px solid #5f5f5f;
+	border-bottom-color: #535353;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	position: relative;
+	top: -1px;
+	background: #878787;
+    background: -moz-linear-gradient(top, #797979, #878787);
+    background: -webkit-gradient(linear, left top, left bottom, from(#797979), to(#878787));
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#797979', EndColorStr='#878787', GradientType=0);
+}
+
+div#TopBar div.topbar ul li.search form input.search {
+	width: 143px;
+	height: 22px;
+	padding: 0 6px;
+	border: 0;
+	float: left;
+	background: transparent;
+	color: #d9d9d9;
+	font-size: 11px;
+}
+
+div#TopBar div.topbar ul li.search form input.search:focus {
+	color: #fff;
+}
+
+div#TopBar div.topbar ul li.search form span.submit {
+	width: 25px;
+	height: 22px;
+	display: block;
+	float: left;
+	overflow: hidden;
+	background-position: -50px 0;
+}
+
+div#TopBar div.topbar ul li.search form span.submit:hover {
+	background-position: -75px 0;	
+}
+
+div#TopBar div.topbar ul li.search form span.submit input {
+	width: 25px;
+	height: 22px;
+	border: 0;
+	background: transparent;
+	opacity: 0.01;
+	filter: alpha(opacity=1);
+	cursor: pointer;
+}
+
+/*
+	Header
+*/
+
+div#Header {
+	position: relative;
+}
+
+body.ForProjection div#Header {
+	display: none;
+}
+
+div#Header h1 {
+	width: 220px;
+	height: 98px;
+	display: block;
+}
+
+div#Header h1 a {
+	width: 100%;
+	height: 100%;
+	line-height: 400px;
+}
+
+div#Header.press h1 a {
+	display: block;
+}
+
+div#Header ul.navigation {
+	width: 960px;
+	height: 56px;
+	background: url("sprite_n.png") 0 0 repeat-x;
+}
+
+div#Header ul.navigation li {
+	width: 320px;
+	height: 56px;
+	float: left;
+	position: relative;
+}
+
+div#Header ul.navigation li.navigation-active {
+	background: url("sprite_n.png") center -60px no-repeat;
+}
+
+div#Header ul.navigation li a {
+	height: 47px;
+	display: block;
+	margin: 2px auto;
+}
+
+div#Header.press ul.navigation li.navigation-1 a,
+div#Header.press ul.navigation li.navigation-2 a,
+div#Header.press ul.navigation li.navigation-3 a {
+	display: none;
+}
+
+div#Header ul.navigation li.navigation-1 a span {
+	background-position: -300px 0;
+}
+
+div#Header ul.navigation li.navigation-2 a span {
+	background-position: -300px -50px;
+}
+
+div#Header ul.navigation li.navigation-3 a span {
+	background-position: -300px -100px;
+}
+
+div#Header ul.navigation li.navigation-4 a span {
+	background-position: -300px -150px;
+}
+
+div#Header ul.navigation li.navigation-4 i.beta {
+	width: 30px;
+	height: 12px;
+	display: block;
+	position: absolute;
+	top: 15px;
+	left: 50%;
+	margin-left: 86px;
+}
+
+div#Header ul.navigation li.navigation-1 a:hover span {
+	background-position: -600px 0;
+}
+
+div#Header ul.navigation li.navigation-2 a:hover span {
+	background-position: -600px -50px;
+}
+
+div#Header ul.navigation li.navigation-3 a:hover span {
+	background-position: -600px -100px;
+}
+
+div#Header ul.navigation li.navigation-4 a:hover span {
+	background-position: -600px -150px;
+}
+
+div#Header ul.navigation li.navigation-1.navigation-active a span,
+div#Header ul.navigation li.navigation-1.navigation-active a:hover span {
+	background-position: 0 0;
+}
+
+div#Header ul.navigation li.navigation-2.navigation-active a span,
+div#Header ul.navigation li.navigation-2.navigation-active a:hover span {
+	background-position: 0 -50px;
+}
+
+div#Header ul.navigation li.navigation-3.navigation-active a span,
+div#Header ul.navigation li.navigation-3.navigation-active a:hover span {
+	background-position: 0 -100px;
+}
+
+div#Header ul.navigation li.navigation-4.navigation-active a span,
+div#Header ul.navigation li.navigation-4.navigation-active a:hover span {
+	background-position: 0 -150px;
+}
+
+/*
+	Highlight
+*/
+
+div#Highlight {
+	height: 330px;
+}
+
+div#Highlight div.wrap {
+	height: 320px;
+	position: relative;
+}
+
+div#Highlight div.articles {
+	width: 100%;
+	height: 330px;
+	background: url("Highligh.png") 0 297px no-repeat;		
+}
+
+div#Highlight div.article {
+	width: 100%;
+	height: 304px;
+	display: none;
+	padding: 26px 0 0 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #40403d;
+}
+
+div#Highlight div.article#promo-video {
+	z-index: 10000;
+}
+
+div#Highlight div.promo-video {
+	display: none;
+	z-index: 1000;
+	width: 480px;
+}
+
+div#Highlight div.selected {
+	display: block;
+}
+
+div#Highlight div.article div.media {
+	float: left;
+	width: 476px;
+	height: 268px;
+	padding: 1px;
+	border: solid #c5c5c4;
+	border-color: rgba(64, 64, 61, 0.3);
+	border-width: 1px 1px 0 1px;
+	background: #fff;
+	position: relative;
+}
+
+div#Highlight div.article div.media span.playbtn {
+	width: 476px;
+	height: 268px;
+	background: url("Highligi.png") center center no-repeat;
+	position: absolute;
+	z-index: 5000;
+	cursor: pointer;
+}
+
+div#Highlight div.article h2,
+div#Highlight div.article h3,
+div#Highlight div.article p {
+	margin: 0 0 0 20px;
+	width: 450px;
+	float: left;
+}
+
+div#Highlight div.article h2 {
+	color: #053D88;
+	font-size: 24px;
+	line-height: 27px;
+}
+
+div.article h2 span {
+    color: #D71921;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-weight: bold;
+    padding-right: 1px;
+}
+
+div#Highlight div.article h3 {
+	margin-top: 24px;
+	color: #b3b3b3;
+	font-size: 12px;
+	font-style: italic;
+	line-height: 18px;
+}
+
+div#Highlight div.article p {
+	padding: 8px 0 0 0;
+}
+
+div#Highlight div.article-selector {
+	position: absolute;	
+	top: 201px;
+	left: 490px;
+}
+
+div#Highlight div.article-selector ul li {
+	width: 100px;
+	padding: 0px 10px;
+	height: 68px;
+	float: left;	
+	position: relative;
+}
+
+div#Highlight div.article-selector ul li:first-child {
+	margin-left: -10px;
+}
+
+div#Highlight div.article-selector ul li a { 
+	display: block;
+	position: relative;
+	left: 10px;
+	top: 6px;
+	width: 100px;
+	height: 56px;
+	overflow: hidden;
+	outline: 0;
+}
+
+div#Highlight div.article-selector ul li a.video span.playbtn {
+	width: 100px;
+	height: 56px;
+	position: absolute;
+	z-index: 5000;
+	background: url("Highligi.png") center center no-repeat;
+	cursor: pointer;
+}
+
+div#Highlight div.article-selector ul li.selected {
+	width: 120px;
+	padding: 0px;
+	left: 10px;
+	position: relative;
+}
+
+div#Highlight div.article-selector ul li.selected a { 
+	left: 0;
+	top: 0;
+	width: 120px;
+	height: 68px;
+}
+
+div#Highlight div.article-selector ul li.selected a.video span.playbtn {
+	width: 120px;
+	height: 68px;
+}
+
+div#Highlight div.article-selector ul li a img {
+	width: 96px;
+	height: 52px;
+	padding: 1px;
+	border: 1px solid #c5c5c4;
+	border-color: rgba(64, 64, 61, 0.3);
+	background: #fff;
+}
+
+div#Highlight div.article-selector ul li.selected a img { 
+	width: 116px;
+	height: 64px;
+}
+
+/* 
+	Footer
+*/
+
+div#Footer {
+	padding: 74px 0 34px 0;
+	background: url("Footer_b.png") 0 0 no-repeat;
+}
+
+body.ForProjection div#Footer {
+	display: none;
+}
+
+div#Footer ul {
+	width: 132px;
+	margin: 0 20px 0 10px;
+	float: left;
+}
+
+div#Footer ul.footer-1 {
+	margin-left: 85px;
+}
+
+div#Footer ul.footer-2 {
+	width: 224px;
+}
+
+div#Footer ul.footer-3 {	
+}
+
+div#Footer ul.footer-4 {
+	width: 122px;
+}
+
+div#Footer ul.footer-5 {	
+}
+
+div#Footer ul:last-child {
+	margin-right: 0;
+}
+
+div#Footer ul li {
+	margin: 0 0 4px 0;
+	color: #797977;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+div#Footer ul li h3 {
+	margin: 0 0 18px 0;	
+}
+
+div#Footer ul li a {
+	padding-bottom: 1px;
+}
+
+/*
+	Page
+*/
+
+div#Page {
+	padding: 43px 0 0 0;
+	margin: 1px 0 0 0;
+	border-top: 1px solid #e6e6e6;
+}
+
+div#Page.simple {
+	border-top: 0;
+}
+
+div#Page div.column {
+	float: left;
+}
+
+div#Page div#Left {
+	padding: 0 10px;
+	width: 180px;
+	clear: left;
+}
+
+body.ForProjection div#Page div#Left {
+	display: none;
+}
+
+div#Page div#Right {
+	width: 200px;
+}
+
+body.Inner div#Page div#Right {
+	margin-top: 43px;
+}
+
+body.ForProjection div#Page div#Right {
+	display: none;
+}
+
+div#Page div#Content {
+	width: 480px;
+	margin: 0 40px 43px 40px;
+}
+
+body.ForProjection div#Page div#Content {
+	width: 100%;
+	margin: 0 0 40px 0;
+}
+
+div#Page div.two-column div#Content {
+	width: 720px;
+	margin: 0 0 0 40px;
+}
+
+div#Page div#Left h3.block {
+	margin: 0 0 11px 0;
+	color: #d71921;
+}
+
+div#Page div#Left p {
+	margin: 0 0 20px 0;	
+}
+
+div#Page div#Left ul {
+	margin: 0 0 40px 0;	
+}
+
+div#Page div#Left ul li {
+	color: #666;
+	font-size: 12px;
+	line-height: 18px;
+	margin: 0 0 6px 0;
+}
+
+div#Page div#Left ul li a { 
+	padding: 1px 0 2px;
+}
+
+div#Page div#Left ul li.active a {
+	color: #191919;
+}
+
+/*
+	Page - Tools
+*/
+
+div#Page div.tools-box {
+	float: left;
+	width: 190px;
+	padding: 0 0 28px 10px;
+}
+
+div#Page div.tools-box ul li {
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+div#Page div.two-column div#Content div.tools-box {
+	float: right;
+	width: 190px;
+	padding: 0 0 28px 10px;
+}
+
+div#Page div.two-column div#Content div.tools-box ul li {
+	float: right;
+	margin: 0 10px 0 0;
+}
+
+div#Page div.tools-box ul li.rss {
+	width: 128px;
+}
+
+div#Page div.tools-box ul li.rss a span,
+div#Page div.tools-box ul li a.fir {
+	width: 16px;
+	height: 16px;
+}
+
+div#Page div.tools-box ul li.rss a {
+	height: 16px;
+	float: left;
+	color: #e77932;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 16px;
+}
+
+div#Page div.tools-box ul li.rss a span {
+	display: block;
+	float: left;
+	padding: 0 5px 0 0;
+	background-position: 0px -25px;	
+}
+
+div#Page div.tools-box ul li.rss a:hover span {
+	background-position: -25px -25px;		
+}
+
+div#Page div.tools-box ul li.flickr a.fir span {
+	background-position: -50px -25px;	
+}
+
+div#Page div.tools-box ul li.flickr a.fir:hover span {
+	background-position: -75px -25px;	
+}
+
+div#Page div.tools-box ul li.twitter a.fir span {
+	background-position: -100px -25px;	
+}
+
+div#Page div.tools-box ul li.twitter a.fir:hover span {
+	background-position: -125px -25px;	
+}
+
+/*
+	Page - Boxes
+*/
+
+div#Page div.double-border-box {
+	border: 1px solid #d7d7d6;	
+	float: left;
+	clear: both;
+}
+
+div#Page div.double-border-box > div {
+	border: 1px solid #fff;
+	padding: 75px 0 0 0;
+	position: relative;
+	float: left;
+	background: #f2f2f2;
+}
+
+div#Page div.events-box {
+	margin: 20px 0 0 0;	
+}
+
+div#Page div.events-box h3.block {
+	width: 106px;
+	height: 49px;
+	position: absolute;
+	top: 0;
+	left: 6px;
+	float: left;
+	background: url("sprite_d.png") 0 46px repeat-x;
+	line-height: 50px;
+	text-align: center;
+}
+
+div#Page div.events-box h3.date {
+	position: absolute;
+	top: -6px;
+	left: 119px;
+}
+
+div#Page div.events-box dl {
+	width: 180px;
+	padding: 0 8px;
+}
+
+div#Page div.events-box dl dt {
+	width: 40px;
+	float: left;
+	clear: both;
+	color: #03694e;
+	font: bold 11px Georgia, "Times New Roman", Times, serif;
+	text-indent: 2px;
+}
+
+div#Page div.events-box dl dd {
+	width: 140px;
+	float: left;
+	color: #40403d;
+	font-size: 12px;
+	line-height: 16px;
+	margin: 0 0 16px;
+}
+
+div#Page div.events-box dl dd a {
+	padding-bottom: 1px;
+}
+
+div#Page div.events-box dl dd span {
+	color: #d71921;
+	font-size: 11px;
+	line-height: 11px;
+	font-weight: bold;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+div#Page div.events-box div.box-footer {
+	width: 180px;
+	height: 38px;
+	margin: 4px 8px 0;
+	background: url("sprite_d.png") 0 -500px repeat-x;	
+	line-height: 38px;
+}
+
+div#Page div.events-box a.more {
+	margin-left: 14px;
+	color: #03694e;
+}
+
+div#Page div.events-box a.more span {
+	background-position: -100px 0;
+}
+
+/*
+	Double tab box & media box
+*/
+
+div#Page div.media-box,
+div#Page div.double-tab-box {
+	float: left;	
+	margin: 20px 0 0 0;
+}
+
+body.Inner div#Page div.double-tab-box:first-child,
+body.Article div#Page div.double-tab-box:first-child {
+	margin-top: 0;
+}
+
+div#Page div.double-tab-box div.tab-selector {
+	width: 200px;
+	height: 30px;
+	margin: 0 0 10px 0;
+}
+
+div#Page div.media-box div.tab-selector h3,
+div#Page div.double-tab-box div.tab-selector h3 {
+	height: 30px;
+	display: block;
+	float: left;
+	margin-left: 10px;
+	color: #797977;
+	line-height: 30px;
+}
+
+div#Page div.double-tab-box div.tab-selector h3 {
+	width: 100px;
+	margin-left: 0;
+	background: url("sprite_g.png") no-repeat;
+	text-align: center;
+	cursor: pointer;
+}
+
+div#Page div.double-tab-box div.tab-selector h3.selected {
+	color: #333;	
+}
+
+div#Page div.double-tab-box div.tab-selector h3.tab-1 {
+	background-position: -100px -50px;	
+}
+
+div#Page div.double-tab-box div.tab-selector h3.tab-1.selected {
+	background-position: -100px 0;	
+}
+
+div#Page div.double-tab-box div.tab-selector h3.tab-2 {
+	background-position: -200px 0;	
+}
+
+div#Page div.double-tab-box div.tab-selector h3.tab-2.selected {
+	background-position: -200px -50px;	
+}
+
+div#Page div.double-tab-box div.tabs div.tab,
+div#Page div.media-box div.media-tabs div.media-tab {
+	display: none;
+}
+
+div#Page div.double-tab-box div.tabs div.selected,
+div#Page div.media-box div.media-tabs div.selected {
+	display: block;
+}
+
+div#Page div.media-box ul.media-selector {
+	width: 200px;
+	height: 20px;
+	background: url("sprite_d.png") 0 -483px repeat-x;
+	color: #797977;
+	font-size: 11px;
+	font-weight: bold;	
+}
+
+div#Page div.media-box ul.media-selector li {
+	width: 20px;
+	height: 20px;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+}
+
+div#Page div.media-box ul.media-selector li.selected {
+	background: url("sprite_d.png") 0 -983px repeat-x;	
+	color: #d71921;
+}
+
+div#Page div.media-box div.media-tab a {
+	float: left;
+}
+
+div#Page div.media-box div.media-tab a img {
+	padding: 1px;
+	float: left;
+	border: 1px solid #c5c5c4;
+	border-color: rgba(64, 64, 61, 0.3);
+	background: #fff;	
+}
+
+div#Page div.media-box div.media-tab p {
+	width: 180px;
+	padding: 10px;
+	clear: both;
+	color: #40403d;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+div#Page div.media-box div.box-footer {
+	margin: 8px 0 0 0;
+	width: 200px;
+}
+
+div#Page div.media-box div.box-footer a.more {
+	color: #d71921;
+}
+
+div#Page div.media-box div.box-footer a.more span {
+	background-position: -150px 0;
+}
+
+/* 
+	Small media box
+*/
+
+div#Page div.small-media-box {
+	padding-top: 20px;
+	margin-top: 15px;
+	float: left;
+	background: url("sprite_s.png") 0 0 no-repeat;		
+}
+
+body.Article div#Page div.small-media-box:first-child {
+}
+
+div#Page div.small-media-box a {
+	float: left;
+}
+
+div#Page div.small-media-box a img {
+	padding: 1px;
+	float: left;
+	border: solid #c5c5c4;
+	border-color: rgba(64, 64, 61, 0.3);
+	border-width: 0 1px;
+	background: #fff;	
+}
+
+div#Page div.small-media-box div.box-footer {
+	width: 200px;
+	padding: 10px 0 15px 0;
+	float: left;
+	background: url("sprite_s.png") -200px 0 no-repeat;		
+}
+
+div#Page div.small-media-box div.box-footer a.more {
+	color: #40403d;
+	line-height: 12px;
+}
+
+div#Page div.small-media-box div.box-footer a.more span {
+	background-position: -150px 0;
+}
+
+div#Page div.small-media-box div.box-footer span.gallery {
+	float: right;
+	top: -3px;
+	right: 10px;
+}
+
+/*
+	Color boxes
+*/
+
+div#Page div.color-box {
+	width: 200px;
+	min-height: 65px;
+	margin: 20px 0 0 0;
+	float: left;
+	clear: both;
+	background-image: url("sprite_b.png");
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+div#Page div.color-box div {
+	min-height: 65px;
+	background-image: url("sprite_b.png");
+}
+
+div#Page div.color-box:first-child {
+	margin-top: 0px;
+}
+
+div#Page div#Left div.color-box {
+	margin-left: -10px;
+}
+
+div#Page div.color-box div.box-content {
+	background: none;
+	word-wrap: break-word;
+}
+
+div#Page div.color-box h3 {
+	width: 160px;
+	padding-top: 4px;
+	padding-bottom: 0;
+	margin-bottom: 20px;
+	border-bottom: 1px solid;
+}
+
+div#Page div.color-box h3 span {
+	margin-top: 17px;
+	display: block;
+	width: 160px;
+	padding: 0;
+	height: 1px;
+	font-size: 1px;
+}
+
+div#Page div.color-box > div > div {
+	padding: 25px 20px 20px 20px;
+}
+
+div#Page div.color-box div.box-content p:first-child:first-letter {
+	float: left;
+	margin: 4px 1px 0 -2px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 41px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	div#Page div.color-box div.box-content p:first-child:first-letter {
+		margin: 7px 0 0 -2px;
+	}
+}
+
+div#Page div.color-box.color-grey {
+	background-color: #ededed;
+	background-position: -200px 0;		
+	background-repeat: repeat-y;
+}
+
+div#Page div.color-box.color-grey div {
+	background-position: -400px bottom;
+	background-repeat: no-repeat;
+}
+
+div#Page div.color-box.color-grey div div {
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+div#Page div.color-box.color-grey h3 {
+	border-bottom-color: #f7f7f7;
+	text-shadow: 0 1px 0 #f0f0f0, 0 2px 0 #cccccb;
+}
+
+div#Page div.color-box.color-grey h3 span {
+	background: #d7d7d6;
+}
+
+div#Page div.color-box.color-grey div.box-content {
+	text-shadow: 0 1px 0 #d2d2d2;	
+}
+
+div#Page div.color-box.color-grey h3,
+div#Page div.color-box.color-grey div.box-content,
+div#Page div.color-box.color-grey div.box-content a,
+div#Page div.color-box.color-grey div.box-content p:first-child:first-letter,
+div#Page div.color-box.color-grey div.box-content p:first-child:first-letter {
+	color: #40403d;
+}
+
+div#Page div.color-box.color-red {
+	background-color: #6b0a0a;
+	background-position: -800px 0;		
+	background-repeat: repeat-y;
+}
+
+div#Page div.color-box.color-red div {
+	background-position: -1000px bottom;
+	background-repeat: no-repeat;
+}
+
+div#Page div.color-box.color-red div div {
+	background-position: -600px 0;
+	background-repeat: no-repeat;
+}
+
+div#Page div.color-box.color-red h3 {
+	border-bottom-color: #911919;
+	text-shadow: 0 1px 0 #741111, 0 2px 0 #610005;
+}
+
+div#Page div.color-box.color-red h3 span {
+	background: #4e0c0d;
+}
+
+div#Page div.color-box.color-red div.box-content {
+	text-shadow: 0 1px 0 #610005;	
+}
+
+div#Page div.color-box.color-red h3,
+div#Page div.color-box.color-red div.box-content,
+div#Page div.color-box.color-red div.box-content a,
+div#Page div.color-box.color-red div.box-content p:first-child:first-letter,
+div#Page div.color-box.color-red div.box-content p:first-child:first-letter {
+	color: #fff;
+}
+
+div#Page div.color-box.color-green {
+	background-color: #0c7459;
+	background-position: -1400px 0;		
+	background-repeat: repeat-y;
+}
+
+div#Page div.color-box.color-green div {
+	background-position: -1600px bottom;
+	background-repeat: no-repeat;
+}
+
+div#Page div.color-box.color-green div div {
+	background-position: -1200px 0;
+	background-repeat: no-repeat;
+}
+
+div#Page div.color-box.color-green h3 {
+	border-bottom-color: #0d8263;
+	text-shadow: 0 1px 0 #0c7459, 0 2px 0 #003426;
+}
+
+div#Page div.color-box.color-green h3 span {
+	background: #03623f;
+}
+
+div#Page div.color-box.color-green div.box-content {
+	text-shadow: 0 1px 0 #003426;	
+}
+
+div#Page div.color-box.color-green h3,
+div#Page div.color-box.color-green div.box-content,
+div#Page div.color-box.color-green div.box-content a,
+div#Page div.color-box.color-green div.box-content p:first-child:first-letter,
+div#Page div.color-box.color-green div.box-content p:first-child:first-letter {
+	color: #fff;
+}
+
+div#Page div.color-box.color-blue {
+	background-color: #113a74;
+	background-position: -2000px 0;		
+	background-repeat: repeat-y;
+}
+
+div#Page div.color-box.color-blue div {
+	background-position: -2200px bottom;
+	background-repeat: no-repeat;
+}
+
+div#Page div.color-box.color-blue div div {
+	background-position: -1800px 0;
+	background-repeat: no-repeat;
+}
+
+div#Page div.color-box.color-blue h3 {
+	border-bottom-color: #1c509a;
+	text-shadow: 0 1px 0 #113a74, 0 2px 0 #00214e;
+}
+
+div#Page div.color-box.color-blue h3 span {
+	background: #082869;
+}
+
+div#Page div.color-box.color-blue div.box-content {
+	text-shadow: 0 1px 0 #00214e;	
+}
+
+div#Page div.color-box.color-blue h3,
+div#Page div.color-box.color-blue div.box-content,
+div#Page div.color-box.color-blue div.box-content a,
+div#Page div.color-box.color-blue div.box-content p:first-child:first-letter,
+div#Page div.color-box.color-blue div.box-content p:first-child:first-letter {
+	color: #fff;
+}
+
+/*
+	Photo & Video Icons
+*/
+
+span.gallery {
+	height: 20px;
+	padding-left: 20px;
+	margin: 0 5px 0 8px;
+	display: inline-block;
+	position: relative;
+	top: 3px;
+	background: url("sprite_i.png") 0 -50px no-repeat;
+	text-decoration: none;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10px;
+	line-height: 16px;
+	-webkit-user-select: none;
+	-moz-user-select: -moz-none;
+}
+
+span.gallery.video {
+	background-position: -100px -50px;
+}
+
+span.gallery.download {
+	background-position: 0px -125px;
+}
+
+span.gallery-c,
+span.gallery.video-c {
+	padding-left: 25px;	
+	top: -2px;
+	color: #525252;
+}
+
+span.gallery span {
+	display: block;
+	width: 4px;
+	height: 20px;
+	position: absolute;
+	right: -4px;
+	top: 0;
+	background: url("sprite_i.png") -96px -50px no-repeat;	
+}
+
+span.gallery-c span {
+	right: -6px;
+	padding-left: 2px;	
+	background-position: -94px -50px;
+}
+
+/*
+	Article lists
+*/
+
+div#Page div#Content.article-list div.article,
+div#Page div#Content.item-list div.article {
+	padding: 10px 0 26px 0;
+	clear: left;
+}
+
+div#Page div#Content.article-list div.article.breaking-news,
+div#Page div#Content.item-list div.article.breaking-news {
+	padding: 10px 0 66px 0;
+	background: url("sprite_t.png") -10px bottom no-repeat;	
+}
+
+div#Page div#Content.article-list div#ListEvents div.article,
+div#Page div#Content.item-list div#ListEvents div.article {
+	padding: 10px 0 0px 0;	
+}
+
+div#Page div#Content.article-list div#ListDocuments div.article,
+div#Page div#Content.item-list div#ListDocuments div.article {
+	padding-bottom: 15px;
+}
+
+div#Page div#Content.article-list div#ListRescripts div.article,
+div#Page div#Content.item-list div#ListRescripts div.article {
+	padding-bottom: 15px;
+}
+
+div#Page div#Content.article-list div.article.notop,
+div#Page div#Content.item-list div.article.notop {
+	padding: 0px 0 26px 0;	
+}
+
+div#Page div#Right.column a.rss,
+div#Page div#Content.article-list a.rss,
+div#Page div#Content.item-list a.rss {
+	height: 16px;
+	float: right;
+	color: #e77932;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 16px;
+}
+
+div#Page div#Content.item-list h2 a {
+	color: #053D88;
+}
+
+div#Page div#Content.item-list a.unit {
+	float: left;
+	clear: left;
+	margin-top: 7px;
+}
+
+div#Page div#Content.item-list a.right {
+	float: right;
+	margin-top: 7px;
+	margin-right: 10px;
+}
+
+div#Page div#Content.item-list a.more span {
+	background-position: -150px 0px;
+}
+
+div#Page div#Right.column a.rss span,
+div#Page div#Content.article-list a.rss span,
+div#Page div#Content.item-list a.rss span {
+	width: 16px;
+	height: 16px;
+}
+
+div#Page div#Right.column a.rss span,
+div#Page div#Content.article-list a.rss span,
+div#Page div#Content.item-list a.rss span {
+	display: block;
+	float: left;
+	padding: 0 5px 0 0;
+	background-position: 0px -25px;	
+}
+
+div#Page div#Content.article-list a.rss:hover span,
+div#Page div#Content.item-list a.rss:hover span {
+	background-position: -25px -25px;		
+}
+
+div#Page div#Content.article-list div.article div.img-holder,
+div#Page div#Content.item-list div.article div.img-holder {
+	width: 196px;
+	height: 108px;
+	float: left;
+	overflow: hidden;
+	padding: 1px;
+	border: solid #c5c5c4;
+	border-width: 1px;
+	margin: 0 10px 10px -10px;
+}
+
+div#Page div#Content.article-list div.article div.img-holder.top,
+div#Page div#Content.item-list div.article div.img-holder.top {
+	margin: 10px 10px 10px -10px;
+}
+
+div#Page div#Content.article-list div.article div.img-holder img,
+div#Page div#Content.item-list div.article div.img-holder img {
+	border: 0px;
+	height: 108px;
+}
+
+div#Page div#Content.article-list div.article div.imgfront,
+div#Page div#Content.item-list div.article div.imgfront {
+	margin-top: 10px !important;
+}
+
+div#Page div#Content.article-list div.article div.date,
+div#Page div#Content.item-list div.article div.date {
+	width: 94px;
+	height: 100px;
+	float: left;
+	padding-left: 6px;
+	margin-right: 22px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;			
+	background: #fff url("sprite_g.png") 0px -200px no-repeat;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ededec), to(#ffffff));
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ededec', EndColorStr='#ffffff', GradientType=0);	
+}
+
+div#Page div#Content.article-list div.article div.date span,
+div#Page div#Content.item-list div.article div.date span {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #191919;
+	font-size: 12px;
+	line-height: 14px;
+	text-align: left;
+	position: relative;
+	float: left;
+	clear: left;
+	cursor: pointer;
+	text-shadow: #fff 0px 1px 0px, #d9d9d8 0px 2px 0px;
+}
+
+div#Page div#Content.article-list div.article div.date span.year,
+div#Page div#Content.item-list div.article div.date span.year {
+	font-weight: bold;
+	padding-top: 21px;	
+}
+
+div#Page div#Content.article-list div.article div.date span.month,
+div#Page div#Content.item-list div.article div.date span.month {
+	font-size: 20px;	
+	line-height: 14px;
+	padding-top: 1px;
+}
+
+div#Page div#Content.article-list div.article div.date span.day,
+div#Page div#Content.item-list div.article div.date span.day {
+	font-size: 24px;
+	line-height: 17px;
+	padding-top: 3px;
+	padding-bottom: 7px;
+	width: 100%;
+	float: left;
+	height: 22px;
+}
+
+div#Page div#Content.article-list div.article div.event-description,
+div#Page div#Content.item-list div.article div.event-description {
+	float: right;
+	width: 598px;
+	padding: 15px 0 25px 0;
+}
+
+div#Page div#Content.article-list div.article div.sign-up,
+div#Page div#Content.item-list div.article div.sign-up {
+	margin-top: 25px;
+	display: block;
+	border: solid #c6c6c4;
+	border-width: 1px 0;
+	padding: 1px 0;
+	width: 100%;
+	float: left;
+}
+
+div#Page div#Content.article-list div.article div.sign-up.noborder,
+div#Page div#Content.item-list div.article div.sign-up.noborder {
+	border: none;
+	margin-top: 0px;
+}
+
+div#Page div#Content.article-list div.article div.sign-up div.button,
+div#Page div#Content.item-list div.article div.sign-up div.button {
+	border: solid #ececeb;
+	float: right;
+	width: 100%;
+	border-width: 1px 0;
+}
+
+div#Page div#Content.article-list div.article div.sign-up div.button a,
+div#Page div#Content.item-list div.article div.sign-up div.button a {
+	float: right;
+	color: #666666;
+	font-size: 10px;
+	font-style: italic;
+	font-weight: bold;
+	margin-right: 10px;
+	padding-right: 31px;
+	line-height: 44px;
+	background: url("sprite_i.png") right -188px no-repeat;
+}
+
+div#Page div#Content.article-list div.article div.sign-up div.button a:focus,
+div#Page div#Content.item-list div.article div.sign-up div.button a:focus {
+	outline: none;
+}
+
+div#Page div#Content.article-list div.article div.sign-up-form,
+div#Page div#Content.item-list div.article div.sign-up-form {
+	border: solid #ececeb;
+	border-width: 0;	
+	padding: 24px 0 0 0;
+	float: left;
+	display: none;
+}
+
+div#Page div#Content.article-list div.noborder div.sign-up-form,
+div#Page div#Content.item-list div.noborder div.sign-up-form {
+	padding: 0 0 0 0;
+}
+
+div#Page div#Content.article-list div.article div.sign-up.active div.sign-up-form,
+div#Page div#Content.item-list div.article div.sign-up.active div.sign-up-form {
+	display: block;
+}
+
+div#Page div#Content.article-list div.article div.sign-up-form h4,
+div#Page div#Content.item-list div.article div.sign-up-form h4 {
+	margin-left: 12px;
+	font-size: 18px;
+	line-height: 20px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #191919;
+	margin-bottom: 20px;
+}
+
+div#Page div#Content.article-list div.article div.sign-up-form.narrow h4,
+div#Page div#Content.item-list div.article div.sign-up-form.narrow h4 {
+	margin-left: 2px;
+}
+
+div#Page div#Content.article-list div.article div.sign-up-form h4.feedback,
+div#Page div#Content.item-list div.article div.sign-up-form h4.feedback {
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 18px;
+}
+
+div#Page div#Content.article-list div.article div.sign-up-form h4.feedback-success,
+div#Page div#Content.item-list div.article div.sign-up-form h4.feedback-success {
+	color: #2f8670;
+}
+
+div#Page div#Content.article-list div.article div.sign-up-form h4.feedback-error,
+div#Page div#Content.item-list div.article div.sign-up-form h4.feedback-error {
+	color: #d91e26;
+}
+
+div#Page div#Content.article-list div.article div.sign-up-form h5,
+div#Page div#Content.item-list div.article div.sign-up-form h5 {
+	margin-left: 12px;
+	margin-bottom: 37px;
+	font-size: 12px;
+	line-height: 16px;
+	font-family: Arial;
+	color: #40403d;
+	display: block;
+}
+
+div#Page div#Content.article-list div.article div.sign-up-form.narrow h5,
+div#Page div#Content.item-list div.article div.sign-up-form.narrow h5 {
+	margin-left: 2px;
+}
+
+div#Page div#Content.article-list div.article h2,
+div#Page div#Content.item-list div.article h2 {
+	color: #053D88;
+	font-size: 20px;
+	line-height: 26px;
+}
+
+div#Page div#Content.article-list div.article h2 a,
+div#Page div#Content.item-list div.article h2 a {
+	padding-bottom: 2px;
+}
+
+div#Page div#Content.article-list div.article div.event-description h2,
+div#Page div#Content.item-list div.article div.event-description h2 {
+}
+
+div#Page div#Content.item-list div.article div.event-description h2 a.wicon {
+	padding-right: 34px;
+	background: url("sprite_i.png") right -198px no-repeat;
+}
+
+div#Page div#Content.article-list div.article.breaking-news h2,
+div#Page div#Content.item-list div.article.breaking-news h2 {
+	color: #d71921;
+	margin-bottom: 3px;
+}
+
+div#Page div#Content.article-list div.article.breaking-news span.last-refreshed,
+div#Page div#Content.item-list div.article.breaking-news span.last-refreshed {
+	color: #d71921;
+	font-family: Arial;
+	font-size: 11px;
+	line-height: 20px;
+	height: 20px;
+	text-align: center;
+	padding: 3px 0px 6px 8px;
+	height: 20px;
+	overflow: hidden;
+	clear: both;
+	background: url("sprite_i.png") -575px -500px no-repeat;
+}
+
+div#Page div#Content.article-list div.article.breaking-news span.inner,
+div#Page div#Content.item-list div.article.breaking-news span.inner {
+	line-height: 20px;	
+	color: #d71921;
+	height: 20px;	
+	padding: 3px 8px 6px 0px;
+	margin-top: -3px;
+	overflow: hidden;
+	background: url("sprite_i.png") right -450px no-repeat;	
+}
+
+div#Page div#Content.article-list div.article h3,
+div#Page div#Content.item-list div.article h3 {
+	color: #b3b3b3;
+	font-size: 12px;
+	font-style: italic;
+	line-height: 18px;
+}
+
+div#Page div#Content.article-list div.article.breaking-news h3,
+div#Page div#Content.item-list div.article.breaking-news h3 {
+	padding-top: 40px;
+	background: url("sprite_t.png") -510px -20px no-repeat;
+}
+
+div#Page div#Content.article-list div.article p,
+div#Page div#Content.item-list div.article p {
+	padding: 7px 0 0 0;
+}
+
+div#Page div#Content.article-list div.article p.top,
+div#Page div#Content.item-list div.article p.top {
+	padding: 16px 0 0 0;
+}
+
+div#Page div#Content.article-list div.article div.event-description span.time ,
+div#Page div#Content.article-list div.article div.event-header span.time ,
+div#Page div#Content.item-list div.article div.event-description span.time {
+	color: #03694e;
+	font-size: 11px;
+	line-height: 20px;
+	font-weight: bold;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/*
+	Related content
+*/
+
+div#Page div.related-content {
+	padding: 0;
+	margin: 0;
+	float: left;
+	clear: both;
+}
+
+div#Page div.related-content > div {
+	padding: 0px 10px 8px 8px;
+	position: relative;
+	float: left;
+}
+
+div#Page div.related-content dl {
+	width: 100%;	
+	margin: 14px 0 0 0;
+}
+
+div#Page div.related-content dl dt {
+	width: 25px;
+	height: 25px;
+	margin: 0 10px 0 0;
+	float: left;
+	clear: both;
+}
+
+div#Page div.related-content dl dt span {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+div#Page div.related-content dl dt.pdf span {
+	background-position: -150px -25px;
+}
+
+div#Page div.related-content dl dt.doc span {
+	background-position: -175px -25px;
+}
+
+div#Page div.related-content dl dt.xls span {
+	background-position: -200px -25px;
+}
+
+div#Page div.related-content dl dt.zip span {
+	background-position: -225px -25px;
+}
+
+div#Page div.related-content dl dt.mov span {
+	background-position: -250px -25px;
+}
+
+div#Page div.related-content dl dt.vid span {
+	background-position: -200px -75px;
+}
+
+div#Page div.related-content dl dd {
+	width: 445px;
+	margin: 0 0 10px 0;
+	float: left;
+	line-height: 16px;	
+}
+
+div#Page div.related-content dl dd a {
+	padding-bottom: 1px;
+	color: #053d88;
+}
+
+div#Page div.related-content dl dd small {
+	color: #999;
+	font-size: 12px;
+	font-style: italic;
+}
+
+/*
+	Column footer
+*/
+
+div#Page div#Content div.column-footer {
+	border-left: 48px solid #c5c5c4;
+	height: 2px;
+}
+
+div#Page div#Content div.column-footer a.more {
+	margin: 6px 0 0 -33px;
+	float: left;
+	color: #053D88;
+}
+
+div#Page div#Content div.column-footer a.more span {
+	background-position: -125px 0;
+}
+
+div#Page div#Content div.column-footer.pager {
+	border-left: none;
+	float: left;
+	width: 100%;
+	height: 41px;
+	position: relative;
+	background: url("sprite_d.png") 0 0 repeat-x;
+	text-align: center;
+}
+
+div#Page div#Content div.column-footer.pager ul {
+	text-align: center;
+	top: 21px;
+	position: relative;
+	margin: 0 70px;
+}
+
+div#Page div#Content div.column-footer.pager ul li {
+	display: inline;
+	position: relative;
+}
+
+div#Page div#Content div.column-footer.pager ul li a {
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Arial;
+	color: #b3b3b3;
+	text-decoration: none;
+	padding: 0px 11px;
+	position: relative;
+}
+
+div#Page div#Content div.column-footer.pager ul li.active a {
+	color: #d71921;
+}
+
+div#Page div#Content div.column-footer.pager ul li span {
+	display: none;
+	width: 132px;
+	height: 8px;
+	position: absolute;
+	top: -22px;
+	left: 50%;
+	margin-left: -66px;
+	background: url("sprite_s.png") -1679px 0px no-repeat;
+}
+
+div#Page div#Content div.column-footer.pager ul li.active span {
+	display: inline;
+}
+
+div#Page div#Content div.column-footer.pager a {
+	outline: none;
+}
+
+div#Page div#Content div.column-footer.pager a.prev {
+	left: 10px;
+	top: 21px;
+	width: 60px;
+	height: 20px;	
+	background: url("sprite_i.png") -275px -50px no-repeat;
+	position: absolute;	
+	text-indent: -9999px;
+	z-index: 1200;
+}
+
+div#Page div#Content div.column-footer.pager a.prev:hover {
+	background-position: -335px -50px;
+}
+
+div#Page div#Content div.column-footer.pager a.prev.disabled:hover {
+	background-position: -275px -50px;
+}
+
+div#Page div#Content div.column-footer.pager a.next {
+	right: 10px;
+	top: 21px;
+	width: 60px;
+	height: 20px;	
+	background: url("sprite_i.png") -395px -50px no-repeat;
+	position: absolute;	
+	text-indent: -9999px;
+	z-index: 1200;	
+}
+
+div#Page div#Content div.column-footer.pager a.next:hover {
+	background-position: -455px -50px;
+}
+
+div#Page div#Content div.column-footer.pager a.next.disabled:hover {
+	background-position: -395px -50px;
+}
+
+body.Press div#Page div#Content.item-list div.article {
+	width: 720px;
+	float: left;
+	clear: both;
+}
+
+body.Press div#Page div#Content.item-list.narrow div.article {
+	width: 480px;
+}
+
+body.Press div#Page div#Content.item-list div.article h2 {
+	color: #282828;	
+}
+
+/*
+	Projection page
+*/
+
+body.ForProjection div#Page div#Content p.projection {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 86px;
+	line-height: 100px;
+	color: #000000;
+	text-align: left;
+}
+
+/* 
+	Error page
+*/
+
+div#Page div#Content.error-message {
+	width: 480px;
+	padding: 0 10px;
+	margin: 11px 230px 21px;
+	color: #40403d;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: left;
+	letter-spacing: 1px;
+}
+
+div#Page div#Content.error-message h1 {
+	padding: 0 0 65px 0;
+	background: url("sprite_t.png") left bottom no-repeat;
+	font-size: 20px;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	text-shadow: #fff 0px 1px 0px, #d9d9d8 0px 2px 0px;
+	letter-spacing: 2px;
+}
+
+div#Page div#Content.error-message p {
+	margin-bottom: 20px;	
+}
+
+/*
+	Themes
+*/
+
+body.Theme-Parliament div#TopBar div.topbar ul {
+	position: absolute;
+	top: 5px;
+	margin: 0;
+}
+
+body.Theme-Parliament div#TopBar div.topbar ul.menu-1 {
+	right: 620px;
+}
+
+body.Theme-Parliament div#TopBar div.topbar ul.menu-2 {
+	left: 340px;
+}
+
+body.Eng.Theme-Parliament div#TopBar div.topbar ul.menu-2 {
+	left: 372px;
+	margin-top: 0px;
+}
+
+body.Theme-Parliament div#TopBar div.topbar ul.menu-2 li:first-child {
+	margin-right: 17px;
+}
+
+body.Theme-Parliament div#TopBar div.topbar ul.tools {
+	right: -20px;
+}
+
+body.Theme-Parliament div#TopBar div.topbar div.menu {
+	width: 960px;
+	background-position: center 0;	
+}
+
+body.Theme-Parliament div#Header,
+body.Theme-Press div#Header {
+	background-position: center -37px;
+}
+
+body.Theme-State div#Header {
+	background-position: 296px -37px;
+}
+
+body.Theme-Parliament div#Highlight div.wrap,
+body.Theme-Press div#Highlight div.wrap,
+body.Theme-Press div#Namecard div.wrap,
+body.Theme-Press div#Page,
+body.Theme-State div#Highlight div.wrap,
+body.Theme-State div#Namecard div.wrap,
+body.Theme-State div#Page {
+	background-position: center -191px;
+}
+
+body.Theme-Parliament div#TopBar div.topbar div.menu,
+body.Theme-Parliament div#Header,
+body.Theme-Parliament div#Highlight div.wrap,
+body.Theme-Parliament.Inner div#Page.simple,
+body.Theme-Parliament.Events div#Page {
+	background-image: url("Header_b.png");
+	background-repeat: no-repeat;
+}
+
+body.Theme-Parliament.Inner div#Page.simple,
+body.Theme-Parliament.Events div#Page {
+	margin-top: 0;
+	background-position: center -194px;
+}
+
+
+body.Theme-Press div#Header,
+body.Theme-Press div#Page {
+	background-image: url("Header_c.jpg");
+	background-repeat: no-repeat;
+}
+
+body.Theme-Press div#Header {
+	background-position: center 0;	
+}
+
+body.Theme-Press div#Page {
+	background-position: center -154px;
+}
+
+body.Theme-State div#TopBar div.topbar div.menu,
+body.Theme-State div#Header,
+body.Theme-State div#Highlight div.wrap,
+body.Theme-State div#Namecard div.wrap,
+body.Theme-State div#Page {
+	background-image: url("Header_c.png");
+	background-repeat: no-repeat;
+}
+
+body.Theme-State div#Page.simple {
+	margin-top: 0;	
+}
+
+body.Theme-MinistryBM div#Header,
+body.Theme-MinistryHM div#Header,
+body.Theme-MinistryKIM div#Header,
+body.Theme-MinistryKUM div#Header,
+body.Theme-MinistryNEFMI div#Header,
+body.Theme-MinistryNFM div#Header,
+body.Theme-MinistryNGM div#Header,
+body.Theme-MinistryVM div#Header,
+body.Theme-MinistryME div#Header,
+body.Theme-Documents div#Header,
+body.Theme-Secretary div#Header {
+	background-position: center 0;
+	background-repeat: no-repeat;
+}
+
+body.Theme-MinistryBM div#Namecard,
+body.Theme-MinistryHM div#Namecard,
+body.Theme-MinistryKIM div#Namecard,
+body.Theme-MinistryKUM div#Namecard,
+body.Theme-MinistryNEFMI div#Namecard,
+body.Theme-MinistryNFM div#Namecard,
+body.Theme-MinistryNGM div#Namecard,
+body.Theme-MinistryVM div#Namecard,
+body.Theme-MinistryME div#Namecard,
+body.Theme-Secretary div#Namecard {
+	background: url("Header_b.jpg") 0 0 repeat-x;
+}
+
+body.Theme-Documents div#DocumentTabs {
+	background: url("Header_b.jpg") 0 0 repeat-x;
+}
+
+body.Theme-MinistryBM div#Namecard div.wrap,
+body.Theme-MinistryHM div#Namecard div.wrap,
+body.Theme-MinistryKIM div#Namecard div.wrap,
+body.Theme-MinistryKUM div#Namecard div.wrap,
+body.Theme-MinistryNEFMI div#Namecard div.wrap,
+body.Theme-MinistryNFM div#Namecard div.wrap,
+body.Theme-MinistryNGM div#Namecard div.wrap,
+body.Theme-MinistryVM div#Namecard div.wrap,
+body.Theme-MinistryME div#Namecard div.wrap,
+body.Theme-Documents div#DocumentTabs div.wrap,
+body.Theme-Secretary div#Namecard div.wrap {
+	background-position: center -154px;
+	background-repeat: no-repeat;
+}
+
+body.Theme-MinistryBM div#Header,
+body.Theme-MinistryBM div#Namecard div.wrap {
+	background-image: url("Header_c.jpg");
+}
+
+body.Theme-MinistryHM div#Header,
+body.Theme-MinistryHM div#Namecard div.wrap {
+	background-image: url("Header_c.jpg");
+}
+
+body.Theme-MinistryKIM div#Header,
+body.Theme-MinistryKIM div#Namecard div.wrap {
+	background-image: url("Header_c.jpg");
+}
+
+body.Theme-MinistryKUM div#Header,
+body.Theme-MinistryKUM div#Namecard div.wrap {
+	background-image: url("Header_c.jpg");
+}
+
+body.Theme-MinistryNEFMI div#Header,
+body.Theme-MinistryNEFMI div#Namecard div.wrap {
+	background-image: url("Header_c.jpg");
+}
+
+body.Theme-MinistryNFM div#Header,
+body.Theme-MinistryNFM div#Namecard div.wrap {
+	background-image: url("Header_c.jpg");
+}
+
+body.Theme-MinistryNGM div#Header,
+body.Theme-MinistryNGM div#Namecard div.wrap {
+	background-image: url("Header_c.jpg");
+}
+
+body.Theme-MinistryVM div#Header,
+body.Theme-MinistryVM div#Namecard div.wrap {
+	background-image: url("Header_c.jpg");
+}
+
+body.Theme-Secretary div#Header,
+body.Theme-Secretary div#Namecard div.wrap {
+	background-image: url("Header_c.jpg");
+}
+
+body.Theme-Documents div#Header,
+body.Theme-Documents div#DocumentTabs div.wrap {
+	background-image: url("Header_c.jpg");
+}
+
+body.Theme-MinistryME div#Header,
+body.Theme-MinistryME div#Namecard div.wrap {
+	background-image: url("Header_c.jpg");
+	padding: 0 60px;
+}
+
+body.Theme-MinistryKIM div#Namecard div.wrap,
+body.Theme-MinistryNFM div#Namecard div.wrap,
+body.Theme-MinistryVM div#Namecard div.wrap,
+body.Theme-MinistryME div#Namecard div.wrap {
+	padding: 0 60px;
+}
+
+body.Theme-MinistryKIM div#Namecard div.wrap div.fields,
+body.Theme-MinistryNFM div#Namecard div.wrap div.fields,
+body.Theme-MinistryVM div#Namecard div.wrap div.fields,
+body.Theme-MinistryME div#Namecard div.wrap div.fields {
+	right: 40px;
+}
+
+/*
+	Floating Layer
+*/
+
+div#FloatingLayer {
+	position: absolute;
+	left: 400px;
+	top: 600px;
+	display: none;
+	z-index: 9999;
+}
+
+div#FloatingLayer .outer {
+	border: solid #929290;
+	border-width: 1px;
+	padding: 1px;
+	background-color: #ffffff;
+	-moz-box-shadow: 0px 0px 40px rgba(64, 64, 61, 0.3);
+  	-webkit-box-shadow: 0px 0px 40px rgba(64, 64, 61, 0.3);
+  	box-shadow: 0px 0px 40px rgba(64, 64, 61, 0.3);	
+}
+
+div#FloatingLayer .outer.glossary {
+	width: 498px;
+}
+
+div#FloatingLayer .outer.article {
+	width: 340px;
+}
+
+div#FloatingLayer .inner {
+	padding: 20px 20px 0px 20px;
+	border: solid #dcdcdc;
+	border-width: 1px;
+}
+
+div#FloatingLayer .inner p {
+	font-size: 13px;
+	line-height: 18px;
+	color: #191919;
+	font-style: italic;
+	padding-bottom: 20px;
+}
+
+div#FloatingLayer .inner p strong {
+	font-weight: bold;
+}
+
+div#FloatingLayer .inner p span {
+	color: #b3b3b3;
+	font-size: 12px;
+}
+
+div#FloatingLayer .spike {
+	position: absolute;
+	width: 17px;
+	height: 11px;
+	background: url("sprite_g.png") -300px 0px no-repeat;
+	bottom: -8px;
+	left: 70px;
+}
+
+body.Article div#FloatingLayer .spike {
+	left: 70px;
+}
+
+div#FloatingLayer .spike.right {
+	left: auto;
+	right: 70px;
+}
+
+div#FloatingLayer .spike.top {
+	top: -8px;
+	bottom: auto;
+	background-position: -317px 0px;
+}
+
+span.marker {
+	position: absolute;
+}
+
+/* 
+	*************** Inner pages ***************
+*/
+
+body.Inner div#Page {
+	padding: 0;
+}
+
+body.Events div#Page,
+body.Inner div#Page.simple {
+	padding: 0 0 0 0;
+}
+body.Inner div#Page.simple-eng {
+	padding: 0;
+	border-width: 0;
+}
+
+/*
+	Namecard
+*/
+
+div#Namecard {
+	height: 153px;
+}
+
+div#Namecard div.wrap {
+	height: 153px;
+	position: relative;
+}
+
+div#Namecard div.wrap div.title {
+	width: 660px;
+	height: 143px;
+	padding: 0 0 0 60px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+div#Namecard h2 {
+	margin: 0 0 13px 0;
+	color: #40403d;
+	font-size: 24px;
+	line-height: 27px;
+}
+
+div#Namecard h3,
+div#Namecard h4 {
+	color: #40403d;
+	font-size: 12px;
+}
+
+div#Namecard h3 {
+	font-weight: bold;	
+}
+
+div#Namecard div.wrap div.fields {
+	width: 180px;
+	height: 129px;
+	padding: 30px 30px 0 50px;
+	display: block;
+	position: absolute;
+	top: -6px;
+	right: -20px;
+	background: url("Header_c.png") 0 0 no-repeat;
+	color: #666;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+div#Namecard div.wrap div.fields h3 {
+	margin-bottom: 2px;	
+}
+
+div#Namecard div.wrap div.fields p {
+	margin-bottom: 3px;
+}
+
+div#Namecard div.wrap div.fields a.more {
+	margin-left: 15px;	
+}
+
+div#Namecard div.wrap div.fields a.more span {
+	background-position: -150px 0;	
+}
+
+/* 
+	Inner Submenu
+*/
+
+div.inner-submenu {
+	height: 98px;
+}
+
+div.inner-submenu div.wrap {
+	height: 98px;
+}
+
+div.inner-submenu.bottom {
+	margin-top: 52px;
+	height: 43px;
+}
+
+div.alphabet-list.bottom div.wrap {
+	height: 43px;
+}
+
+div.inner-submenu h2 {
+	font-size: 24px;
+	color: #40403d;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	letter-spacing: 2px;
+	line-height: 48px;
+	position: relative;
+	text-transform: uppercase;
+	text-shadow: #fff 0px 1px 0px, #d9d9d8 0px 2px 0px;
+	text-align: center;
+	width: 100%;
+	padding-top: 9px;
+}
+
+div.inner-submenu ul {
+	height: 42px;
+	position: relative;	
+	margin-left: 12px;
+	background: url("InnerSub.png") center 0px no-repeat;
+}
+
+div.inner-submenu.bottom ul {
+	height: 43px;
+}
+
+div.inner-submenu ul li {
+	margin: 0 10px;
+	float: left;
+	height: 42px;
+	text-align: center;
+	line-height: 42px;
+	color: #797977;
+}
+
+div.inner-submenu ul li a,
+div.inner-submenu ul li span {
+	padding: 0 5px;
+	line-height: 42px;
+	float: left;
+	color: #797977;
+	font-size: 14px;
+	font-family: Arial;
+	text-decoration: none;
+}
+
+div.inner-submenu ul li a:hover {
+	text-decoration: none;
+}
+
+div.inner-submenu ul li.active span {
+	color: #d71921;
+	background: url("sprite_d.png") 0px -1461px repeat-x;
+	font-size: 14px;
+}
+
+	
+div.inner-submenu-center ul {
+	text-align: center;
+}
+
+div.inner-submenu-center ul li,
+div.inner-submenu-center ul li a,
+div.inner-submenu-center ul li span {
+	display: inline-block;
+	float: none;
+}
+
+/*
+	NavBar
+*/
+
+div#NavBar {
+	margin: 0;
+}
+
+div#NavBar ul {
+	height: 33px;
+	overflow: hidden;
+	white-space: nowrap;		
+	background: url("sprite_d.png") 0 -470px repeat-x;
+}
+
+div#NavBar ul li {
+	height: 30px;	
+	padding: 0 5px 0 5px;
+	float: left;
+	background: url("sprite_i.png") -590px 0 no-repeat;
+	color: #666;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10px;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 30px;
+}
+
+div#NavBar ul li:first-child {
+	background: none;
+}
+
+div#NavBar ul li:last-child {
+	color: #40403d;
+}
+
+div#NavBar ul li a {
+	padding: 2px 5px;
+	color: inherit;
+}
+
+/*
+	Layout versions
+*/
+
+body.Inner div#Page div#Left,
+body.Inner div#Page div#Content,
+body.Inner div#Page div.two-column div#Left,
+body.Inner div#Page div.two-column div#Content,
+body.Inner div#Page div.three-column-newsletter div#Right {
+	margin-top: 43px
+}
+
+body.Inner div#Page div.one-column div#Content.error-message {
+	margin-top: 11px
+}
+
+/* 
+	Indent box
+*/
+
+div#Page div.indent-box {
+	padding: 10px;
+	margin: 20px 0 0 0;
+	float: left;
+	clear: both;
+}
+
+div#Page div.indent-box > div {
+	position: relative;
+	float: left;
+}
+
+div#Page div.related-box dl {
+	width: 180px;	
+	margin: 19px 0 0 0;
+}
+
+div#Page div.related-box dl dd {
+	line-height: 16px;	
+	margin: 0 0 10px 0;
+}
+
+div#Page div.related-box dl dd a {
+	padding-bottom: 1px;
+	color: #053d88;
+}
+
+div#Page div.related-box dl dt {
+	color: #999;
+	font-size: 12px;
+	font-style: italic;
+}
+
+/*
+	Article
+*/
+
+div#Page div#Content div.article-head,
+div#Page div#Content div.form-head {
+	margin: 0 0 25px 0;
+	line-height: 20px;
+}
+
+div#Page div#Content div.article-head.unit {
+	margin: 25px 0 15px 0;
+	clear: left;
+}
+
+div#Page div#Content div.article-head.unit:first-child {
+	margin-top: 0px;
+}
+
+div#Page div#Content.item-list a.header-back {
+	float: right;
+}
+
+div#Page div#Content div.form-head {
+	width: 500px;
+	margin-bottom: 40px;
+}
+
+div#Page div#Content div.form-head.wide {
+	width: 100%;
+}
+
+div#Page div#Content div.article-head h1,
+div#Page div#Content div.article-content h1,
+div#Page div#Content div.form-head h1 {
+	margin: -2px 0 0 0;
+	color: #191919;
+	font-size: 24px;
+	line-height: 27px;
+}
+
+div#Page div#Content div.article-content h5 {
+	color: #40403d;
+	font-size: 12px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	margin-bottom: 12px;
+}
+
+div#Page div#Content div.form-head h1,
+div#Page div#Content div.form-head p {
+	margin-bottom: 12px;	
+}
+
+div#Page div#Content div.article-head h4 {
+	margin: 2px 0 0 0;
+	color: #999;
+	font-size: 12px;
+	font-style: italic;
+}
+
+div#Page div#Content div.article-content p,
+div#Page div#Content div.form-info p {
+	margin: 0 0 20px 0;
+	color: #40403d;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+div#Page div#Content div.article-content p.lead span.btm {
+	margin: 20px -10px 0 -10px;
+	width: 100%;
+	padding: 0 10px;
+	height: 3px;
+	display: block;
+	background: url(sprite_d.png) 0 -500px repeat-x;
+}
+
+div#Page div#Content div.article-content p:first-child:first-letter,
+div#Page div#Content div.form-head p:first-child:first-letter {
+	float: left;
+	margin: 6px 0 0 -2px;
+	color: #40403d;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 41px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	div#Page div#Content div.article-content p:first-child:first-letter,
+	div#Page div#Content div.form-head p:first-child:first-letter {
+		margin: 10px 0 0 -2px;
+	}
+}
+
+div#Page div#Content div.article-content.noinitial p:first-child:first-letter {
+	float: none;
+	margin: 0;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+div#Page div#Content div.article-content p span.annotation {
+	background: url("backgrou.png") 0 0 repeat;
+	cursor: pointer;
+}
+
+div#Page div#Content div.article-content ul,
+div#Page div#Content div.article-content ol,
+div#Page div#Content div.form-info ul,
+div#Page div#Content div.form-info ol {
+	margin-bottom: 20px;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+div#Page div#Content div.article-content ol li,
+div#Page div#Content div.form-info ol li {
+	list-style: inside decimal;
+	margin: 6px 0 0 0;	
+	margin-left: 4px;
+	font-weight: normal;	
+}
+
+div#Page div#Content div.article-content ul li,
+div#Page div#Content div.form-info ul li {
+	margin: 6px 0 0 0;
+	font-weight: normal;
+	padding-left: 14px;
+	background: url("sprite_i.png") 3px -594px no-repeat;	
+}
+
+div#Page div#Content div.article-content ul.linked li span,
+div#Page div#Content div.form-info ul.linked li span {
+	display: block;
+	margin-top: 5px;
+	font-size: 12px;
+}
+
+div#Page div#Content div.article-content ul.linked li a,
+div#Page div#Content div.form-info ul.linked li a {
+	font-weight: bold;
+	color: #053D88;
+}
+
+div#Page div#Content div.article-content ul li a,
+div#Page div#Content div.article-content ol li a,
+div#Page div#Content div.form-info ol li a,
+div#Page div#Content div.form-info ul li a {
+	color: #191919;
+}
+
+div#Page div#Content div.article-content ul li ul li,
+div#Page div#Content div.article-content ol li ol li 
+div#Page div#Content div.form-info ul li ul li,
+div#Page div#Content div.form-info ol li ol li {
+	width: 440px;	
+}
+
+div#Page div#Content div.article-content ul li ul li a,
+div#Page div#Content div.form-info ul li ul li a {
+	color: #40403d;
+	padding-bottom: 1px;
+}
+
+div#Page div#Content div.article-content ul li ul li ul li
+div#Page div#Content div.form-info ul li ul li ul li {
+	width: 400px;
+}
+
+div#Page div#Content div.article-content ul li ul li ul li ul li,
+div#Page div#Content div.form-info ul li ul li ul li ul li {
+	width: 360px;
+}
+
+div#Page div#Content div.article-content ul li ul li ul li ul li ul li {
+	width: 320px;
+}
+
+div#Page div#Content div.article-content ul li ul li ul li a,
+div#Page div#Content div.form-info ul li ul li ul li a {
+	color: #666666;
+}
+
+div#Page div#Content div.article-tools {
+	width: 500px;
+	height: 50px;
+	margin: 52px -10px 0;
+	background: url("sprite_d.png") 0 -500px repeat-x;
+}
+
+div#Page div#Content div.article-tools ul {
+	width: 480px;
+	height: 50px;
+	padding: 0 10px;
+	background: url("sprite_d.png") 0 47px repeat-x;
+}
+
+div#Page div#Content div.article-tools ul li {
+	height: 20px;
+	margin: 15px 20px 15px 0;
+	float: left;
+	display: block;
+}
+
+div#Page div#Content div.article-tools ul li.print {
+	margin-right: 0;
+	float: right;
+	display: block;
+}
+
+div#Page div#Content div.article-foot {
+	margin: 25px 0 0 0;
+	float: left;
+}
+
+div#Page div#Content div.article-foot h3 {
+	margin: 0 0 17px 0;
+	color: #333;
+	font-size: 10px;
+}
+
+div#Page div#Content div.article-body div.related-box dl {
+	width: 480px;
+}
+
+/*
+	Article Templates
+*/
+
+div#Page div#Content div.content-contacts h3 {
+	font-family: Georgia, "Times New Roman", Times, serif;	
+	color: #444;
+	font-size: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: #fff 0px 1px 0px, #d9d9d8 0px 2px 0px;
+	line-height: 12px;
+	letter-spacing: 1px;
+	margin: 0 0 12px 0;	
+}
+
+div#Page div#Content div.content-contacts p {
+	margin-bottom: 32px;
+}
+
+div#Page div#Content div.content-commisionars h2 {
+	font-size: 18px;
+	color: #191919;
+	margin: 40px 0 20px;
+}
+
+div#Page div#Content div.content-commisionars h5 {
+	color: #40403d;
+	font-size: 12px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	margin-bottom: 20px;
+	margin-top: -15px;
+}
+
+div#Page div#Content div.content-commisionars h2:first-child {
+	margin-top: 0px;
+}
+
+div#Page div#Content div.content-commisionars ul {
+	position: relative;
+	width: 500px;
+	margin-left: -10px;
+	clear: both;
+	float: left;
+}
+
+div#Page div#Content div.content-commisionars ul li {
+	width: 233px;	
+	list-style: none;
+	padding: 0 0 40px 0;
+	margin: 0 0 15px 0;
+	float: left;
+	background: url(sprite_s.png) -1300px bottom no-repeat;
+}
+
+div#Page div#Content div.content-commisionars ul li.fullclear {
+	clear: both;
+	display: block;
+	float: none;
+	height: 1px;
+	padding: 0;
+	visibility: hidden;
+	width: 100%;
+}
+
+div#Page div#Content div.content-commisionars ul li img {
+	height: auto;
+	overflow: hidden;
+	padding: 1px;
+	background: #fff;
+	border: 1px solid #c5c5c4;
+	border: 1px solid rgba(64, 64, 61, 0.3);	
+	float: left;
+}
+
+div#Page div#Content div.content-commisionars ul li span {
+	line-height: 18px;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #40403d;
+	width: 233px;
+	display: block;
+	text-align: center;
+}
+
+div#Page div#Content div.content-commisionars ul li.center span {
+	text-align: center;
+}
+
+div#Page div#Content div.content-commisionars ul li span.name {
+	font-weight: bold;
+	clear: left;
+}
+
+div#Page div#Content div.content-commisionars ul li a {
+	margin: 4px 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10px;
+	line-height: 12px;
+	font-style: italic;
+	font-weight: bold;
+	float: left;
+	text-align: left;
+	color: #40403D;
+	background: url("sprite_i.png") left -147px no-repeat;
+	padding-left: 14px;
+}
+
+div#Page div#Content div.content-commisionars ul li.center a {
+	text-align: center;
+}
+
+div#Page div#Content div.content-commisionars ul li a:first-child {
+	background: none;
+	padding: 0;
+}
+
+div#Page div#Content div.content-commisionars ul li.odd {
+	margin-right: 27px;
+	clear: left;
+}
+
+div#Page div#Content div.content-commisionars ul li.center {
+	margin-left: 127px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+div#Page div#Content div.content-commisionars a {
+	float: left;
+	position: relative;
+	text-decoration: none;
+}
+
+div#Page div#Content div.content-commisionars div.commisionar-media {
+	width: 235px;
+	margin: 4px 20px 15px -10px;	
+	float: left;	
+}
+
+div#Page div#Content div.content-commisionars div.commisionar-media.full {
+	width: 500px;
+	margin: 0 -10px 15px;
+}
+
+div#Page div#Content div.content-commisionars div.commisionar-media img {
+	float: left;
+	padding: 1px;
+	background: #fff;
+	border: 1px solid #c5c5c4;
+	border: 1px solid rgba(64, 64, 61, 0.3);
+}
+
+div#Page div#Content div.content-commisionars div.commisionar-media > div {
+	clear: both;
+	width: 336px;
+	padding: 7px 80px 40px;
+	margin: 0 2px;
+	background: url("sprite_s.png") -800px bottom no-repeat;
+	color: #808080;
+	font-size: 11px;
+	line-height: 14px;
+	text-align: center;
+	word-wrap: break-word;
+}
+
+div#Page div#Content div.content-organization ul {
+	list-style: none;
+	padding: 0 0 40px 0;
+	margin: 0 0 15px 0;
+}
+
+div#Page div#Content div.content-organization-2col ul {
+	width: 230px;	
+	float: left;
+	margin-left: 20px;
+}
+
+div#Page div#Content div.content-organization-2col ul.odd {
+	margin-left: 0;
+	clear: both;
+}
+
+div#Page div#Content div.content-organization ul li a {
+	padding-bottom: 2px;	
+}
+
+div#Page div#Content div.content-organization ul li.title {
+	background: none;	
+	padding-left: 0;
+}
+
+/*
+	Photo & Video lists
+*/
+
+div.item-list div.list-head {
+	margin-bottom: 29px;	
+}
+
+div.item-list div.list-head h1 {
+	float: left;
+	color: #191919;
+	font-size: 24px;
+}
+
+div.item-list div.list-head a.more {
+	margin-right: 10px;
+	float: right;
+	color: #053D88;
+}
+
+div.item-list div.list-head a.more span {
+	background-position: -150px 0;
+}
+
+div.item-list div.list-wrap {
+	width: 730px;
+	margin: 0 0 0 -10px;
+	float: left;
+	clear: left;
+}
+
+div.central-list div.list-wrap {
+	padding-bottom: 39px;
+	margin-bottom: 5px;
+	background: url("sprite_t.png") right bottom no-repeat;
+}
+
+div.item-list div.photo {
+	width: 175px;
+	float: left;
+	margin-left: 10px;
+	padding-bottom: 22px;
+	position: relative;
+	display: block;
+	border: none;
+	z-index: 100;
+}
+
+div.item-list div.photo:first-child {
+	margin-left: 0px;
+}
+
+div.item-list div.photo.zoom {
+	z-index: 1900;
+}
+
+div.item-list div.photo span {
+	display: none;
+}
+
+div.item-list div.photo span.sub {
+	color: #808080;
+	font-family: Arial;
+	font-size: 11px;
+	line-height: 16px;
+	padding: 15px 9px 20px 9px;
+}
+
+div.item-list div.photo.zoom span.gallery {
+	display: inline;
+	float: right;
+	top: 12px;
+	right: 12px;
+}
+
+div.item-list div.photo.zoom span.gallery span {
+	display: inline;
+}
+
+div.item-list div.photo.zoom span.sub {
+	display: block;
+}
+
+div.item-list div.photo .outer {
+	position: relative;
+	z-index: 100;
+	border: none;
+	float: left;
+}
+
+div.item-list div.photo.zoom .outer {
+	position: absolute;
+	width: 204px;
+	padding: 1px;
+	border: solid #959593;
+	border-width: 1px;
+	top: -19px;
+	left: -16px;
+	z-index: 2000;
+	background: #ffffff;
+	-moz-box-shadow: 0px 0px 40px rgba(64, 64, 61, 0.3);
+  	-webkit-box-shadow: 0px 0px 40px rgba(64, 64, 61, 0.3);
+  	box-shadow: 0px 0px 40px rgba(64, 64, 61, 0.3);	
+}
+
+div.item-list div.photo.zoom .inner {
+	border: solid #dcdcdc;
+	border-width: 1px;
+	padding: 1px;
+	position: relative;
+}
+
+div.item-list div.photo div.img-holder {
+	padding: 1px;
+	border: solid #c5c5c4;
+	border-width: 1px;
+	background-color: #f4f4ef;
+	width: 171px;
+	height: 94px;
+	overflow: hidden;
+}
+
+div.item-list div.photo div.img-holder img {
+	margin-left: 0px;
+	width: 171px;
+	height: 94px;
+}
+
+div.item-list div.photo div.img-holder a {
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	width: 171px;
+	height: 94px;
+	float: left;
+	position: relative;
+}
+
+div.item-list div.photo.zoom div.img-holder {
+	width: 196px;
+	height: 108px;
+	padding: 2px;
+	border: none;
+}
+
+div.item-list div.photo.zoom div.img-holder img {
+	margin-left: 0px;
+	width: 196px;
+	height: 108px;
+}
+
+div.item-list div.photo.zoom div.img-holder a {
+	overflow: visible;
+	height: 108px;	
+}
+
+div.item-list div.photo h2 {
+	margin: 12px 10px 0 10px;
+	font-size: 12px;
+	line-height: 20px;
+	color: #999999;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+}
+
+div.item-list div.photo.zoom h2 {
+	width: 150px;
+}
+
+div.item-list div.photo h2 a {
+	font-size: 15px;
+	line-height: 16px;
+	font-weight: normal;
+	color: #053d88;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-decoration: none;
+	display: block;
+	margin-bottom: 11px;
+	font-style: normal;
+}
+
+div.item-list div.photo h2 a:hover {
+	text-decoration: underline;
+}
+
+/*
+	Sitemap
+*/
+
+div#SimpleHeader,
+div#SimpleHeader div.wrap {
+	height: 82px;
+}
+
+div#SimpleHeader div.wrap h2 {
+	padding-top: 14px;
+	height: 69px;
+	line-height: 69px;
+}
+
+div#Page div.sitemap {
+	padding-top: 32px;
+}
+
+div.sitemap h3.block {
+	color: #d71921;	
+	margin-bottom: 20px;
+}
+div.sitemap h3.block a {
+	color: #d71921;	
+}
+
+div.sitemap div.column {
+	float: left;
+	width: 273px;
+	font-size: 12px;
+	line-height: 16px;
+	margin: 0 10px;
+}
+
+div.sitemap div.middle-column {
+	margin: 0 51px 0 50px;
+}
+
+div.sitemap div.column > ul {
+	margin-bottom: 42px;	
+}
+
+div.sitemap ul li {
+	margin: 6px 0 0 0;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+div.sitemap ul li a {
+	color: #191919;
+}
+
+div.sitemap ul li ul li {
+	width: 259px;
+	padding-left: 14px;
+	font-weight: normal;
+	background: url("sprite_i.png") 3px -594px no-repeat;
+}
+
+div.sitemap ul li ul li a {
+	color: #40403d;
+	padding-bottom: 1px;
+}
+
+div.sitemap ul li ul li ul li {
+	width: 245px;
+}
+
+div.sitemap ul li ul li ul li ul li {
+	width: 231px;
+}
+
+div.sitemap ul li ul li ul li ul li ul li {
+	width: 217px;
+}
+
+div.sitemap ul li ul li ul li a {
+	color: #666666;
+}
+
+div.sitemap ul li.toggle {
+	background: url(sprite_j.png) left -44px no-repeat;
+	padding-left: 12px;
+	margin-left: -12px;
+}
+
+div.sitemap ul li.toggle.closed {
+	background-position: left 6px;	
+}
+
+/* 
+	*************** Press *************** 
+*/
+
+body.Press div#Page {
+	background: none;
+}
+
+body.Press div#Page.simple {
+	padding: 25px 0 0 0;	
+	margin-top: 0;
+	background-image: url("Header_c.jpg");
+	background-repeat: no-repeat;
+	background-position: center -154px;
+}
+
+body.Search.Press div#Page {
+	border-top: 1px solid #E6E6E6;
+	margin-top: 1px;
+	background: none;
+}
+
+body.Press div#Right {
+	margin-top: 43px;
+}
+
+body.Press div#SearchForm.header-gradient {
+	background: url("Header_b.jpg") repeat-x;		
+}
+
+body.Press div#SearchForm.header-gradient div.wrap {
+	background: url("Header_c.jpg") center 0 no-repeat;	
+}
+
+body.Press div#PressMenu.header-gradient div.wrap {
+	background: url("Header_c.jpg") center -153px no-repeat;	
+}
+
+/*
+	Press theme list
+*/
+
+div#Page div.press-theme-list {
+	width: 480px;
+	float: left;
+	height: 100%;
+	margin-top: 18px;
+	padding: 46px 0px 0px 0px;
+	background: url("sprite_s.png") -810px -18px no-repeat;
+}
+
+div#Page div.press-theme-list ull {
+}
+
+div#Page div.press-theme-list ul li {
+	width: 215px;
+	float: left;
+	font-size: 13px;
+	line-height: 18px;
+	color: #40403d;
+	margin-bottom: 40px;
+}
+
+div#Page div.press-theme-list ul li.odd {
+	margin-right: 50px;
+	clear: left;
+}
+
+div#Page div.press-theme-list ul li h4 {
+	font-size: 20px;
+	line-height: 24px;
+	color: #053d88;
+	padding-bottom: 5px;
+}
+
+/*
+	User box
+*/
+
+div#Header div.user-box {
+	height: 56px;
+	line-height: 51px;
+	position: absolute;
+	right: 0;
+	top: 99px;
+}
+
+div#Header div.user-box span {
+	text-align: right;
+	color: #797977;
+	font-size: 14px;
+	display: inline-block;
+	line-height: 51px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+}
+
+div#Header div.user-box a {
+	text-align: left;
+	text-decoration: none;
+	color: #053d88;
+	font-size: 12px;
+	line-height: 41px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	display: inline-block;
+	background: url("sprite_g.png") -425px -190px no-repeat;
+	margin-left: 12px;
+	margin-right: 10px;
+	padding-left: 12px;
+}
+
+div#Header div.user-box a:hover {
+	text-decoration: underline;
+}
+
+/*
+	Press Q&A
+*/
+
+div#Page div#Content div.question-answer-form {
+	width: 710px;
+	padding-left: 10px;
+}
+
+div#Page div#Content div.question-answer-feedback {
+	width: 710px;
+	padding-bottom: 46px;
+	background: url("sprite_t.png") no-repeat scroll right 65px transparent;
+}
+
+div#Page div#Content div.question-answer-feedback h2 {
+	font-size: 20px;
+	line-height: 26px;
+	color: #03694E;
+	margin-bottom: 26px;
+}
+
+div#Page div#Content.item-list div#PressQuestionAnswer div.article h2 {
+	margin-bottom: 26px;
+}
+
+/*
+	Press live coverage
+*/
+
+div#Page div#Content div.article-content p.attendance {
+	color: #999999;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+div#Page div#Content div.article-content p.attendance strong {
+	color: #191919;
+	font-style: normal;
+	font-weight: normal;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	padding-right: 2px;
+}
+
+div#Page div#Content div.live-coverage {
+	width: 730px;
+	margin: 0 0 0 -10px;
+	border-top: 1px #c6c6c4 solid;
+	border-bottom: 1px #ececeb solid;
+	padding: 1px 0;
+	float: left;
+}
+
+div#Page div#Content div.live-coverage div.actual {
+	padding: 29px 0 31px 0;
+	border-bottom: 1px #c6c6c4 solid;
+	border-top: 1px #ececeb solid;	
+	position: relative;
+	background: url("Highligh.png") -10px 300px no-repeat;	
+	float: left;
+}
+
+div#Page div#Content div.actual div.stream {
+	padding: 1px;
+	border: 1px #c5c5c4 solid;
+	width: 476px;
+	height: 268px;
+	overflow: hidden;
+	float: left;
+}
+
+div#Page div#Content div.actual div.question {
+	width: 230px;
+	margin-left: 20px;
+	padding-top: 24px;
+	height: 242px;
+	float: left;
+}
+
+div#Page div#Content div.actual blockquote {
+	width: 230px;
+	float: left;
+	padding: 0px;
+	margin: 22px 0px 0px 0px;
+}
+
+div#Page div#Content div.actual blockquote > div {
+	padding: 0px 0px 15px;
+	color: #40403d;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 20px;
+}
+
+div#Page div#Content div.actual blockquote > div span {
+	width: 43px;
+	height: 35px;
+	margin: 3px 5px 0 0;
+	display: block;
+	float: left;
+	background: url("sprite_i.png") 0 -75px no-repeat;
+}
+
+div#Page div#Content div.actual p {
+	float: right;
+	color: #999999;
+	font-size: 14px;
+	line-height: 16px;
+	font-style: italic;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+div#Page div#Content div.question-wall {
+	float: left;
+	margin-top: 14px;
+	width: 730px;
+	margin-left: -10px;
+	border-bottom: 1px #ececeb solid;
+	margin-bottom: 1px;
+}
+
+div#Page div#Content div.question-wall h3.block {
+	margin-left: 10px;
+}
+
+div#Page div#Content div.question-wall div.question-form,
+div#Page div#Content div.question-wall div.question-queue {
+	width: 726px;
+	margin-top: 15px;
+	border: 1px #939391 solid;
+	padding: 1px;
+	height: 62px;
+	background: transparent;
+	-moz-box-shadow: 0px 0px 8px rgba(64, 64, 61, 0.3);
+  	-webkit-box-shadow: 0px 0px 8px rgba(64, 64, 61, 0.3);
+  	box-shadow: 0px 0px 8px rgba(64, 64, 61, 0.3);		
+}
+div#Page div#Content div.question-wall div.question-queue {
+	height: 112px;
+}
+
+div#Page div#Content div.question-wall div.form {
+	background: transparent;
+}
+
+div#Page div#Content div.question-wall div.question-form fieldset,
+div#Page div#Content div.question-wall div.question-queue div.queue-container {
+	border: 1px #d8d8d8 solid;
+	padding: 1px;
+	background: #fff;
+    background: -moz-linear-gradient(top, #f5f5f5, #ffffff);
+    background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#ffffff));
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#f5f5f5', EndColorStr='#ffffff', GradientType=0);			
+	height: 58px;
+	width: 722px;
+	margin-top: 0;
+}
+div#Page div#Content div.question-wall div.question-queue div.queue-container {
+	height: 108px;
+}
+
+div#Page div#Content div.question-wall div.question-form fieldset textarea,
+div#Page div#Content div.question-wall div.question-queue div.queue-container div#questionQueue {
+	height: 38px;
+	width: 558px;
+	color: #666666;
+	font-size: 12px;
+	line-height: 19px;
+	font-family: Arial;
+	padding: 10px 0px 10px 8px;
+	margin-right: 8px;
+    border-style: none; 
+    border-color: transparent; 
+    overflow: auto;
+	background: transparent;
+	resize: none;
+	float: left;
+}
+div#Page div#Content div.question-wall div.question-queue div.queue-container div#questionQueue {
+	height: 88px;
+	width: 714px;
+	overflow: hidden;
+}
+
+div#Page div#Content div.question-wall div.question-form fieldset textarea:focus {
+	outline: none;
+}
+
+div#Page div#Content div.question-wall div.question-form span#CharCounter {
+	width: 32px;
+	height: 32px;
+	margin: 13px 6px 0 0;
+	float: left;
+	font-size: 10px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #000000;
+	line-height: 30px;
+	text-align: center;
+	background: url("sprite_g.png") 0 -325px no-repeat;
+}
+
+div#Page div#Content div.question-wall div.question-form span#CharCounter.alert {
+	color: #D71921;
+}
+
+div#Page div#Content div.question-wall div.question-form div.element {
+	width: 106px;
+	clear: none;
+	height: 58px;
+}
+
+div#Page div#Content div.question-wall div.element span.c {
+	height: 58px;
+}
+
+div#LiveChat {
+	padding-bottom: 16px;
+	margin-bottom: 1px;
+	margin-top: 23px;
+	padding-right: 0px;
+	position: relative;
+	border-bottom: 1px #c6c6c4 solid;	
+}
+
+div#LiveChat span#scrollUp,
+div#LiveChat span#scrollDown {
+	width: 25px;
+	height: 14px;
+	position: absolute;
+	cursor: pointer;
+	right: 12px;
+	background: url("sprite_i.png") -447px 4px no-repeat;
+	z-index: 20000;
+}
+
+div#LiveChat span#scrollDown {
+	top: 250px;
+	background-position: -472px 4px;
+}
+
+div#LiveChat span#scrollUp:hover {
+	background-position: -217px 4px;
+}
+
+div#LiveChat span#scrollDown:hover {
+	top: 250px;
+	background-position: -242px 4px;
+}
+
+div#LiveChat div.container {
+	position: relative;
+	overflow: hidden;
+	height: 264px;	
+	outline: none;	
+}
+
+div#LiveChat ul {
+	padding-right: 28px;
+	padding-left: 10px;	
+}
+
+div#LiveChat ul li {
+	color: #40403d;
+	font-size: 12px;
+	line-height: 16px;
+	font-family: Arial;
+	clear: left;
+	margin-bottom: 20px;
+}
+
+div#LiveChat ul li span,
+div#questionQueue span {
+	color: #999999;
+	font-size: 12px;
+	line-height: 16px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	padding-right: 5px;
+}
+
+/*
+	Moderator issues
+*/
+
+div#Page .moderator {
+	display: none;
+}
+
+div.Moderator div#Content div.question-wall div.question-queue div.queue-container div#moderateNext {
+	display: block;
+	width: 107px;
+	float: right;
+}
+ 
+div.Moderator div#Content div.question-wall div.question-queue div.queue-container div#questionQueue {
+ 	width: 598px !important;
+}
+
+span.button-99 a {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #fff;
+    cursor: pointer;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 44px;
+    padding: 0;
+    text-align: center;
+    text-shadow: 0 1px 0 #01563f, 0 2px 0 #347765;
+    width: 107px;
+    display: block;
+}
+
+span.button-99 a:hover {
+	text-decoration: none;
+}
+
+a.Monitor {
+	padding: 5px;
+	float: right;
+	background-color: #5e5e5e;
+	color: #fff;
+	font-weight: bold;
+}
+
+a.Monitor:hover {
+	text-decoration: none;
+	background-color: #a3a3a3;
+}
+
+/* 
+	*************** Article ***************
+*/
+
+div#Page div.three-column-article div#Content {
+}
+
+div#Page div.three-column-article div#Content div.article-head {
+	position: relative;	
+}
+
+div#Page div.three-column-article div#Content div.article-head h1,
+div#Page div.three-column-article div#Content div.article-head h4 {
+	width: 480px;
+	margin-right: 40px;
+}
+
+div#Page div#Content div.article-tools ul li a.print,
+div#Page div.three-column-article div#Content div.article-head a.print {
+	float: right;
+	color: #666;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 18px;
+	padding-right: 29px;
+}
+
+div#Page div.three-column-article div#Content div.article-head a.print {
+	position: absolute;
+	top: 1px;
+	right: 10px;
+}
+
+div#Page div#Content div.article-tools ul li a.print span,
+div#Page div.three-column-article div#Content div.article-head a.print span {
+	width: 24px;
+	height: 20px;
+	margin: 0 0 0 -24px;
+	position: relative;
+	left: 29px;
+	display: inline-block;
+	vertical-align: bottom;
+	background-position: -250px -50px;
+}
+
+div#Page div.three-column-article div#Content div.article-body {
+	width: 480px;
+	margin-right: 40px;
+	float: left;
+}
+	
+/*
+	Article - Boxes
+*/
+
+body.Article div#Page div.small-media-box {
+	margin-top: 0;
+}
+
+div#Page div.double-border-left-box {
+	border: solid #c5c5c4;	
+	border-width: 1px 0 1px 1px;
+	padding: 1px 0 1px 1px;
+	margin: 10px 0 0 0;
+	float: left;
+	clear: both;
+}
+
+div#Page div.double-border-left-box > div {
+	padding: 22px 10px 8px 8px;
+	border: solid #ececeb;
+	border-width: 1px 0 1px 1px;
+	position: relative;
+	float: left;
+}
+
+div#Page div.double-border-left-box dl {
+	width: 180px;	
+	margin: 19px 0 0 0;
+}
+
+div#Page div.double-border-left-box dl dt {
+	width: 25px;
+	height: 25px;
+	margin: 0 10px 0 0;
+	float: left;
+	clear: both;
+}
+
+div#Page div.double-border-left-box dl dt span {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+div#Page div.double-border-left-box dl dt.pdf span {
+	background-position: -150px -25px;
+}
+
+div#Page div.double-border-left-box dl dt.doc span {
+	background-position: -175px -25px;
+}
+
+div#Page div.double-border-left-box dl dt.xls span {
+	background-position: -200px -25px;
+}
+
+div#Page div.double-border-left-box dl dt.zip span {
+	background-position: -225px -25px;
+}
+
+div#Page div.double-border-left-box dl dt.mov span {
+	background-position: -250px -25px;
+}
+
+div#Page div.double-border-left-box dl dt.ppt span {
+	background-position: -250px -75px;
+}
+
+div#Page div.double-border-left-box dl dt.rar span {
+	background-position: -225px -75px;
+}
+
+div#Page div.double-border-left-box dl dt.default span {
+	background-position: -275px -75px;
+}
+
+div#Page div.double-border-left-box dl dd {
+	width: 145px;
+	margin: 0 0 10px 0;
+	float: left;
+	line-height: 16px;	
+}
+
+div#Page div.double-border-left-box dl dd a {
+	padding-bottom: 1px;
+	color: #053d88;
+}
+
+div#Page div.double-border-left-box dl dd small {
+	color: #999;
+	font-size: 12px;
+	font-style: italic;
+}
+
+/*
+	Article content boxes & media
+*/
+
+div#Page div#Content.article div.article-body h4 {
+	margin: 40px 0 20px 0;
+	color: #191919;
+	font-size: 18px;
+}
+
+div#Page div#Content.article div.article-body div.article-picture-boxes {
+	width: 500px;
+	height: auto;
+	float: none;
+	position: relative;
+	margin: 0 -10px 4px;	
+}
+
+div#Page div#Content.article div.article-body div.media,
+div#Page div#Content div.form-info div.media {
+	width: 500px;
+	margin: 0 -10px 20px;
+	float: left;
+}
+
+div#Page div#Content.article div.article-body div.article-picture-boxes div.media {
+	margin-bottom: 15px;
+}
+
+div#Page div#Content.article div.article-body div.media a,
+div#Page div#Content div.form-info div.media a {
+	float: left;
+	position: relative;
+	text-decoration: none;
+}
+
+div#Page div#Content.article div.article-body div.media img,
+div#Page div#Content div.form-info div.media img {
+	float:left;
+	padding:1px;
+	background: #fff;
+	border: 1px solid #c5c5c4;
+	border: 1px solid rgba(64, 64, 61, 0.3);
+}
+
+div#Page div#Content.article div.article-body div.media a span.more,
+div#Page div#Content div.form-info div.media span.more {
+	display: none;
+	padding-left: 24px;
+	margin-left: 0;
+	border: solid #c5c5c4;
+	border-width: 1px 0 1px 1px;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	position: absolute;
+	bottom: 10px;
+	right: 0px;
+	color: #40403d;
+	background: #fff;
+}
+
+div#Page div#Content.article div.article-body div.media a:hover span.more,
+div#Page div#Content div.form-info div.media a:hover span.more {
+	display: block;
+}
+
+div#Page div#Content.article div.article-body div.media a span.more span,
+div#Page div#Content div.form-info div.media a span.more span {
+	background-position: -150px 0;	
+}
+
+div#Page div#Content.article div.article-body div.media a span.more b,
+div#Page div#Content div.form-info div.media a span.more b {
+	width: 14px;
+	height: 12px;
+	display: inline-block;
+	margin: 0 10px 0 9px;
+	position: relative;
+	top: 3px;
+	background: url("sprite_i.png") -200px -50px no-repeat;
+}
+
+div#Page div#Content.article div.article-body div.media div.caption,
+div#Page div#Content div.form-info div.media div.caption {
+	clear: both;
+	width: 336px;
+	padding: 7px 80px 40px;
+	margin: 0 2px -16px 2px;
+	background: url("sprite_s.png") -800px bottom no-repeat;
+	color: #808080;
+	font-size: 11px;
+	line-height: 14px;
+	text-align: center;
+}
+
+div#Page div#Content.article div.article-body div.media div.titles,
+div#Page div#Content div.form-info div.media div.titles {
+	clear: both;
+	width: 235px;
+	padding: 7px 10px;
+	margin: 0 2px;
+	font-size: 12px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	line-height: 18px;
+	color: #40403d;
+}
+
+div#Page div#Content.article div.article-body div.media div.titles span.name {
+	float: left;
+	font-size: 14px;
+	color: #000000;
+}
+
+div#Page div#Content.article div.article-body div.media div.titles span.title {
+	float: left;
+	clear: left;
+}
+
+div#Page div#Content.article div.article-body div.media-half,
+div#Page div#Content div.form-info div.media-half {
+	width: 235px;
+	margin: 4px -10px 0px;	
+}
+
+div#Page div#Content.article div.article-body div.media div.titles a.more {
+	float: left;
+	clear: left;
+	font-size: 10px;
+	line-height: 12px;
+	margin-top: 5px;
+	margin-left: 14px;
+}
+
+div#Page div#Content.article div.article-body div.media div.titles a.more span {
+	background-position: -150px 0px;
+}
+
+div#Page div#Content.article div.article-body div.media-half div.caption,
+div#Page div#Content div.form-info div.media-half div.caption {
+	width: 215px;
+	padding: 7px 10px 40px;
+	background-position: -1300px bottom;
+}
+
+div#Page div#Content.article div.article-body div.media-third,
+div#Page div#Content div.form-info div.media-third {
+	width: 146px;
+	margin: 4px -10px -4px;
+}
+
+div#Page div#Content.article div.article-body div.media-third div.caption,
+div#Page div#Content div.form-info div.media-third div.caption {
+	width: 126px;
+	padding: 7px 10px 40px;
+	background-position: -1533px bottom;
+}
+
+div#Page div#Content.article div.article-body div.media-auto,
+div#Page div#Content div.form-info div.media-auto {
+	width: auto;
+}
+
+div#Page div#Content.article div.article-body div.media-left,
+div#Page div#Content div.form-info div.media-left {
+	margin-right: 20px;
+	float: left;
+}
+
+div#Page div#Content.article div.article-body div.media-right,
+div#Page div#Content div.form-info div.media-right {
+	margin-left: 20px;
+	float: right;
+}
+
+div#Page div#Content.article div.article-body blockquote {
+	width: 255px;
+	float: right;
+	padding: 1px 0;
+	margin: 5px -10px 20px 20px;
+	border: solid #c5c5c4;
+	border-width: 1px 0;
+}
+
+div#Page div#Content.article div.article-body blockquote > div {
+	padding: 12px 10px 15px;
+	border: solid #ececeb;
+	border-width: 1px 0;
+	color: #40403d;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+div#Page div#Content.article div.article-body blockquote > div span {
+	width: 43px;
+	height: 35px;
+	margin: 3px 5px 0 0;
+	display: block;
+	float: left;
+	background: url("sprite_i.png") 0 -75px no-repeat;
+}
+
+div#Page div#Content.article div.article-tools {
+	width: 500px;
+	float: left;
+}
+
+div#Page div#Content.article div.article-tools ul {
+	width: 480px;
+}
+
+div#Page div#Content.article div.article-body div.related-box dl {
+	width: 480px;
+}
+
+/* 
+	Tables
+*/
+
+div#Content div.table-wrap {
+	position: relative;
+	width: 498px;
+	padding: 1px;
+	clear: left;
+	display: block;
+	background: url("sprite_t.png") -500px top no-repeat;
+	padding-top: 32px;
+	margin: 20px 0 52px -10px;
+}
+
+div#Content div.table-wrap span.thead-bg {
+	position: absolute;
+	left: 0px;
+	top: 31px;
+	width: 498px;
+	height: 0px;
+	border: 1px #cccccc solid;
+	background: #656563;
+    background: -moz-linear-gradient(top, #656563, #41413e);
+    background: -webkit-gradient(linear, left top, left bottom, from(#656563), to(#41413e));
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#656563', EndColorStr='#41413e', GradientType=0);	
+	z-index: 10;
+}
+
+div#Content div.table-wrap span.tbody-bg {
+	position: absolute;
+	left: 0px;
+	bottom: -32px;
+	width: 498px;
+	height: 32px;
+	background: url("sprite_t.png") 0px bottom no-repeat;
+	z-index: 1;
+}
+
+div#Content table {
+	border-collapse: separate;
+	border: 0px;
+	z-index: 10;
+	position: relative;
+	margin: 20px 0 35px 0;
+}
+
+div#Content table.wjs {
+	margin: 0;
+}
+
+div#Content table thead {
+	position: relative;
+	background: #656563;
+	height: auto;
+}
+
+div#Content table thead.trans {
+	background: none;
+}
+
+div#Content table td strong {
+	font-weight: bold;
+}
+
+div#Content table thead td {
+	padding: 9px;
+	color: #ffffff;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 11px;
+	line-height: 16px;
+}
+
+div#Content table thead tr:first-child td {
+	border-top: 1px #fff solid;
+}
+
+div#Content table thead tr:first-child td:first-child {
+	border-left: 1px #fff solid;
+}
+
+div#Content table thead tr.last-child td {
+	border-bottom: 1px #fff solid;
+}
+
+div#Content table thead tr.last-child.rowspan td.last-child {
+	border-bottom: 0px;
+}
+
+div#Content table thead tr td.last-child {
+	border-right: 1px #fff solid;
+}
+
+div#Content table tbody tr td {
+	padding: 8px 10px;
+	width: 100%;
+	color: #40403d;
+	font-size: 12px;
+	line-height: 16px;
+	background: #f2f2f2;
+	border-top: 1px #ffffff solid;
+	border-bottom: 1px #ffffff solid;	
+	white-space: nowrap;
+}
+
+div#Content table tbody tr td {
+	text-align: right;
+	padding: 8px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+div#Content table tr td:first-child {
+	text-align: left;
+	font-family: Arial;
+}
+
+div#Content table tr td.center {
+	text-align: center;
+}
+
+div#Content table tbody tr.even td {
+	color: #40403d;
+	background: #ffffff;
+	border-top: 1px #cccccc solid;
+	border-bottom: 1px #cccccc solid;	
+}
+
+div#Content table tbody tr.last-child td {
+	border-bottom: 1px #cccccc solid;	
+}
+
+div#Content table td.num {
+	text-align: right;
+	padding: 8px;
+}
+
+div#Content table tbody td.num {
+	color: #40403d;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+/* 
+	*************** Collection ***************
+*/
+
+body.Collection div#Page {
+	padding: 0;	
+}
+
+div#Page div.collection-item {
+	float: left;
+	width: 330px;
+	padding-right: 10px;
+	margin-bottom: 55px;
+}
+
+div#Page div.collection-item.odd {
+	margin-right: 40px;
+}
+
+div#Page div.collection-item p {
+	color: #40403d;
+	font-size: 13px;
+	line-height: 18px;
+	margin-bottom: 9px;
+}
+
+div#Page div.collection-item span.words {
+	float: left;
+	clear: left;
+	margin-top: 15px;
+	color: #053d88;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+div#Page div.collection-item span.words a,
+div#Page div.collection-item ul li a {
+	color: #053d88;
+}
+
+div#Page div.collection-item span.words strong {
+	font-weight: bold;
+	color: #40403d;
+}
+
+div#Page div.collection-item a.more {
+	color: #053D88;
+}
+
+div#Page div.collection-item a.more span {
+	background-position: -150px 0;
+}
+
+div#Page div.collection-item ul {
+	margin-bottom: 12px;	
+}
+
+div#Page div.collection-item ul li {
+	color: #053d88;
+	font-size: 12px;
+	line-height: 18px;	
+}
+
+div#Page div.collection-item h3 {
+	color: #053d88;
+	font-size: 20px;
+	line-height: 26px;
+	margin-bottom: 6px;
+}
+
+div#Page div.collection-item h3 a {
+	text-decoration: none;
+	color: #053d88;
+}
+
+div#Page div.collection-item h3 a:hover {
+	text-decoration: underline;
+}
+
+div#Page div.collection-item a.rss {
+	clear: both;
+	float: left;
+}
+
+div#Page div.collection-item a.rss span {
+	width: 16px;
+	height: 16px;
+}
+
+div#Page div.collection-item a.rss {
+	height: 16px;
+	float: left;
+	color: #e77932;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 16px;
+}
+
+div#Page div.collection-item a.rss span {
+	display: block;
+	float: left;
+	padding: 0 5px 0 0;
+	background-position: 0px -25px;	
+}
+
+div#Page div.collection-item a.rss:hover span {
+	background-position: -25px -25px;		
+}
+
+div#Page div.collection-item-g13 ul li a {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #053D88;
+}
+
+div#Page div.collection-item-g13 a.more {
+	color: #000;
+}
+
+div#Page div#Content.item-list div.collection-item-g13 a.more span {
+	background-position: -175px 0;	
+}
+/* 
+	*************** Documents ***************
+*/
+
+body.Doc div#Page div#Left,
+body.Doc div#Page div#Content,
+body.Doc div#Page div.two-column div#Left,
+body.Doc div#Page div.two-column div#Content {
+	margin-top: 30px
+}
+
+body.Doc div#Page div.two-column div#Left {
+	margin-top: 30px;	
+}
+
+div#DocumentTabs {
+	height: 84px;
+}
+
+div#DocumentTabs div.wrap {
+	height: 84px;
+	position: relative;
+}
+
+div#DocumentTabs div.search-tabs {
+	height: 38px;
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	bottom: -2px;
+}
+
+div#DocumentTabs div.search-tabs ul {
+	margin-left: 226px;
+}
+
+div#DocumentTabs div.search-tabs ul li {
+	height: 39px;
+	float: left;
+	position: relative;
+	padding-left: 18px;
+}
+
+div#DocumentTabs div.search-tabs ul li.active {
+	background: #ffffff url("sprite_g.png") 0px -100px no-repeat;
+}
+
+div#DocumentTabs div.search-tabs ul li a {
+	padding-top: 2px;
+	height: 37px;
+	line-height: 37px;
+	padding-right: 18px;
+	display: block;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10px;
+	color: #797977;
+	text-shadow: #fff 0px 1px 0px, #d9d9d8 0px 2px 0px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+div#DocumentTabs div.search-tabs ul li.active a {
+	padding-top: 0px;
+	color: #333333;
+	height: 39px;
+	line-height: 39px;
+	font-size: 12px;	
+	background: #ffffff url("sprite_g.png") right -50px no-repeat;
+}
+
+div#DocumentTabs div.search-tabs ul li a:hover {
+	text-decoration: none;
+}
+
+div#DocumentTabs div.search-tabs ul li a:focus {
+	outline: none;
+}
+
+/*
+	Search form
+*/
+
+div#Page div#Content div.search-form {
+	width: 706px;
+	height: 38px;
+	position: relative;
+	border: solid #939391;
+	border-width: 1px;
+	padding: 1px;
+	-moz-box-shadow: 0px 0px 8px rgba(64, 64, 61, 0.3);
+  	-webkit-box-shadow: 0px 0px 8px rgba(64, 64, 61, 0.3);
+  	box-shadow: 0px 0px 8px rgba(64, 64, 61, 0.3);		
+}
+
+div#Page div#Content div.search-form fieldset {
+	border: solid #d8d8d8;
+	border-width: 1px;
+	height: 36px;
+	background: #fff;
+    background: -moz-linear-gradient(top, #f5f5f5, #ffffff);
+    background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#ffffff));
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#f5f5f5', EndColorStr='#ffffff', GradientType=0);		
+}
+
+div#Page div#Content div.search-form input.text {
+	background: none;
+	line-height: 36px;
+	color: #666666;
+	font-size: 18px;
+	padding: 0 17px;
+	border: none;
+	height: 36px;
+	width: 638px;
+	font-family: Georgia, "Times New Roman", Times, serif;	
+	font-style: italic;
+	float: left;
+}
+
+div#Page div#Content div.search-form input.submit {
+	background: url("sprite_i.png") -50px -75px no-repeat;
+	width: 22px;
+	height: 22px;
+	border: none;
+	cursor: pointer;
+	text-indent: -9999px;
+	margin-top: 7px;
+	float: left;
+}
+
+/*
+	Search filters
+*/
+
+div#Page div#Content div.search-filters {
+	margin: 15px 0 0 0;	
+}
+
+div#Page div#Content div.browse-filters {
+	margin: -8px 0 0 0;
+}
+
+div#Page div#Content div.search-filters fieldset.source,
+div#Page div#Content div.search-filters fieldset.type,
+div#Page div#Content div.browse-filters fieldset.filtered {
+	background: url("sprite_t.png") -735px top no-repeat;	
+}
+
+div#Page div#Content div.search-filters div.filter-head {
+	height: 21px;
+	padding: 4px 4px 4px 0;
+	margin: 5px 0;
+	float: left;
+	cursor: pointer;
+}
+
+div#Page div#Content div.search-filters div.filter-head span {
+	width: 25px;
+	height: 25px;
+	display: block;
+	float: left;
+	background-position: -480px -25px;
+}
+
+div#Page div#Content div.search-filters div.filter-head h3 {
+	height: 21px;
+	margin: 0 4px 0 7px;
+	float: left;
+	color: #7f7f7f;
+	line-height: 21px;
+}
+
+div#Page div#Content div.search-filters div.filter-head small {
+	color: #b3b3b3;
+	font-size: 10px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+}
+
+div#Page div#Content div.search-filters fieldset.closed div.filter,
+div#Page div#Content div.search-filters fieldset.opening div.filter {
+	display: none;
+}
+
+div#Page div#Content div.search-filters fieldset.opening div.filter-head h3,
+div#Page div#Content div.search-filters fieldset.open div.filter-head h3 {
+	color: #d71921;	
+}
+
+div#Page div#Content div.search-filters fieldset.opening div.filter-head span,
+div#Page div#Content div.search-filters fieldset.open div.filter-head span {
+	background-position: -455px -25px;
+}
+
+div#Page div#Content div.search-filters div.filter {
+	width: 740px;
+	margin: 0 -10px;
+	overflow: hidden;
+	clear: both;
+	color: #797977;
+	margin-bottom: 17px;
+}
+
+div#Page div#Content div.search-filters fieldset div.filter ul {
+	margin: 0 20px 0 13px;
+}
+
+div#Page div#Content div.search-filters fieldset div.filter ul li {
+	margin-bottom: 2px;
+}
+
+div#Page div#Content div.browse-filters fieldset div.filter ul {
+	margin: 0 23px 0 10px;
+}
+
+div#Page div#Content div.browse-filters fieldset div.filter ul li {
+	padding: 3px 0;	
+	line-height: 18px;
+}
+
+div#Page div#Content div.browse-filters fieldset div.filter ul li a {
+	padding-top: 1px;
+	padding-bottom: 2px;
+	color: #797977;
+}
+
+div#Page div#Content div.search-filters fieldset div.filter ul li a i {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #b3b3b3;
+}
+
+div#Page div#Content div.search-filters fieldset div.filter ul li label {
+	padding-bottom: 5px;
+	top: 1px;
+	line-height: 18px;
+}
+
+div#Page div#Content div.search-filters fieldset.source div.filter ul,
+div#Page div#Content div.search-filters fieldset.source div.filter ul li {
+	width: 337px;
+}
+
+div#Page div#Content div.search-filters fieldset.source div.filter ul li label {
+	width: 310px;
+}
+
+div#Page div#Content div.browse-filters fieldset.date div.filter ul,
+div#Page div#Content div.browse-filters fieldset.date div.filter ul li,
+div#Page div#Content div.search-filters fieldset.type div.filter ul,
+div#Page div#Content div.search-filters fieldset.type div.filter ul li {
+	width: 152px;	
+}
+
+div#Page div#Content div.search-filters fieldset.type div.filter ul li label {
+	width: 125px;	
+}
+
+div#Page div#Content div.search-filters fieldset.date div.filter span {
+	width: 155px;
+	height: 21px;
+	margin: 0 20px 0 10px;
+	display: block;
+	float: left;
+	color: #666666;
+	font-size: 12px;
+	font-family: Arial;
+	line-height: 18px;
+}
+
+div#Page div#Content div.search-filters fieldset.date div.filter {
+	padding-bottom: 2px;
+}
+
+div#Page div#Content div.search-filters fieldset.date div.filter span.title {
+	color: #b3b3b3;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10px;
+	font-style: italic;
+	line-height: 16px;
+}
+
+div#Page div#Content div.search-filters fieldset.date div.filter span input {
+	width: 123px;
+	height: 21px;
+	padding-left: 32px;
+	margin-bottom: 2px;
+	border: none;
+	float: left;
+	background: url("sprite_i.png") -275px -25px no-repeat;
+	text-transform: lowercase;
+	line-height: 21px;
+	cursor: pointer;
+}
+
+div#Page div#Content div.search-filters fieldset.date div.filter span input.active {
+	background-position: -275px 0px;
+}
+
+div#Page div#Content div.browse-filters fieldset.filtered {
+	padding: 15px 0;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+div#Page div#Content div.browse-filters fieldset.filtered a {
+	padding-right: 29px;
+	margin-right: 20px;
+	display: inline-block;
+	min-height: 20px;
+	background: url("sprite_i.png") right -250px no-repeat;
+	color: #03694e;
+	text-align: 0 1px 0 #fff;
+	line-height: 20px;
+}
+
+div#Page div#Content div.browse-filters fieldset.filtered a:hover {
+	background-position: right -300px;
+}
+
+/*
+	Search foot
+*/
+
+div#Page div#Content div.search-foot {
+	height: 50px;
+	margin: 0 0 8px 0;
+	position: relative;
+	background: url("sprite_t.png") 0 0 no-repeat;
+}
+
+div#Page div#Content div.search-foot span.button-119 {
+	position: absolute;
+	left: 50%;
+	top: 5px;
+	margin-left: -64px;
+}
+
+div#Page div#Content div.search-foot span.filtered {
+	position: absolute;
+	top: 15px;
+	left: 4px;
+	color: #191919;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-weight: bold;
+	font-style: italic;
+	text-transform: uppercase;
+	text-shadow: #fff 0px 1px 0px, #d9d9d8 0px 2px 0px;
+}
+
+div#Page div#Content div.search-foot span.filtered b {
+	color: #d71921;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+/* 
+	*************** Events ***************
+*/
+
+body.Events div#Page {
+	border-top: 0;
+	color: #40403D;
+}
+
+body.Events div#Page div#NavBar {
+	color: #666666;
+}
+
+body.Events div#Page div#NavBar a {
+	color: #666666;
+}
+
+div#Left.column ul li a {
+	color: #666666;
+}
+
+div#Content div.calendar-pager {
+	height: 32px;
+	margin-left: -10px;
+	width: 710px;
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: url("sprite_t.png") 0 bottom no-repeat;
+	position: relative;	
+}
+
+div#Content div.calendar-pager.bottom {
+	padding-top: 11px;
+	height: 21px;
+	background-position: -730px top;
+}
+
+div#Content div.calendar-pager a {
+	width: 140px;
+	color: #40403D;
+	height: 20px;
+	background: url("sprite_g.png") 0 0 no-repeat;
+	text-decoration: none;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10px;
+	line-height: 20px;
+	font-weight: bold;
+	font-style: italic;
+	position: absolute;
+	z-index: 1000;
+	top: 0px;
+	display: block;
+	cursor: pointer;
+}
+
+div#Content div.calendar-pager.bottom a {
+	top: auto;
+	bottom: 0px;
+}
+
+div#Content div.calendar-pager a.prev {
+	left: 10px;
+	background-position: -500px -100px;
+}
+
+div#Content div.calendar-pager a.prev span {
+	padding-right: 17px;
+	text-align: right;
+	float: right;
+	cursor: pointer;
+}
+
+div#Content div.calendar-pager a.next {
+	right: 10px;
+	background-position: -300px -100px;
+}
+
+div#Content div.calendar-pager a.next span {
+	padding-left: 17px;	
+	text-align: left;	
+	cursor: pointer;	
+}
+
+div#Content div.calendar-pager h3 {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	color: #d71921;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 20px;
+	line-height: 20px;
+	text-shadow: #fff 0px 1px 0px, #d9d9d8 0px 2px 0px;	
+	z-index: 500;
+}
+
+div#Content div.info-block {
+	float: left;
+	width: 100%;
+	padding-top: 30px;
+}
+
+div#Content div.info-block a.rss {
+	height: 16px;
+	float: right;
+	color: #e77932;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 16px;
+	margin-right: 10px;
+}
+
+div#Content div.info-block a.rss span {
+	width: 16px;
+	height: 16px;
+}
+
+div#Content div.info-block a.rss span {
+	display: block;
+	float: left;
+	padding: 0 5px 0 0;
+	background-position: 0px -25px;	
+}
+
+div#Content div.info-block a.rss:hover span {
+	background-position: -25px -25px;		
+}
+
+div#Content div.info-block span.info {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #797977;
+	font-size: 11px;
+	line-height: 20px;
+	font-style: italic;
+	float: left;
+}
+
+div.info-block span.info span {
+	color: #d71921;
+	font-size: 11px;
+	line-height: 11px;
+	font-weight: bold;
+	padding-right: 1px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/*
+	Events table
+*/
+
+div#EventsTable {
+	margin: 26px 0px 26px 0px;
+	display: block;
+	padding: 0 1px;
+	position: relative;
+	width: 728px;
+	margin-left: -10px;
+	float: left;
+	background: url("EventsTa.png") 0 0 repeat-y;
+}
+
+div#EventsTable ul.week {
+	height: 81px;;
+	position: relative;
+	float: left;
+	margin-left: 1px;
+	margin-right: -1px;
+	overflow: visible !important;
+}
+
+div#EventsTable ul.week.active {
+	height: 100%;
+}
+
+div#EventsTable ul.week li {
+	height: 100%;
+	width: 101px;
+	float: left;
+	padding: 0px 1px;
+	margin: 0 0 0 1px;
+	position: relative;
+}
+
+div#EventsTable ul.week:last-child {
+	margin-bottom: -5px;
+}
+
+div#EventsTable ul.week:last-child li {
+	margin-bottom: 0px;
+}
+
+div#EventsTable ul.week li > a {
+	display: block;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;	
+	float: left;
+	margin: -3px 0 0 0;
+	padding: 0px 7px 0px 7px;
+	margin-bottom: 8px;
+	width: 85px;
+	height: 100px;
+	background: #fff url("sprite_g.png") 0px -200px no-repeat;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ededec), to(#ffffff));
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ededec', EndColorStr='#ffffff', GradientType=0);			
+}
+
+div#EventsTable ul.week li a:focus {
+	outline: none;
+}
+
+div#EventsTable ul.week.active li > a {
+	background: -webkit-gradient(linear, 0 81, left top, color-stop(0, rgba(255,255,255, 1)), color-stop(1, rgba(237,237,236, 1)));	
+}
+
+div#EventsTable ul.week li.passed > a {
+	background: #fff;
+}
+
+div#EventsTable ul.week li.today > a {
+	background: #fff url("sprite_g.png") -100px -200px no-repeat;
+    background: -webkit-gradient( linear, 45 110, left top, color-stop(0.35, rgba(255,255,255, 1)), color-stop(0.71, rgba(205,225,220, 0.8)));
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#cde1dc', EndColorStr='#ffffff', GradientType=0);			
+}
+
+div#EventsTable ul.week.active li.today > a {
+    background: -webkit-gradient( linear, 45 110, left top, color-stop(0.35, rgba(255,255,255, 1)), color-stop(0.71, rgba(205,225,220, 0.8)));
+}
+
+div#EventsTable ul.week li a:hover {
+	text-decoration: none;
+}
+
+div#EventsTable ul.week li a span {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #b3b3b3;
+	font-size: 12px;
+	line-height: 14px;
+	text-align: left;
+	position: relative;
+	float: left;
+	clear: left;
+	cursor: pointer;
+}
+
+div#EventsTable ul.week li.passed a span {
+	color: #b3b3b3;
+	text-shadow: none;
+}
+
+div#EventsTable ul.week li.hasevent a span {
+	color: #191919;
+	text-shadow: #fff 0px 1px 0px, #d9d9d8 0px 2px 0px;
+}
+
+div#EventsTable ul.week li.today a span {
+	color: #03694e;
+	text-shadow: none;
+}
+
+div#EventsTable ul.week li a span.year {
+	font-weight: bold;
+	padding-top: 21px;	
+}
+
+div#EventsTable ul.week li a span.month {
+	font-size: 20px;	
+	line-height: 14px;
+	padding-top: 1px;
+}
+
+div#EventsTable ul.week li a span.day {
+	font-size: 24px;
+	line-height: 17px;
+	padding-top: 3px;
+	padding-bottom: 7px;
+	width: 100%;
+	float: left;
+	height: 22px;
+	margin-bottom: -1px;
+	background: url("sprite_d.png") 0px -471px;
+}
+
+div#EventsTable ul.week li a span.dayname {
+	text-shadow: none;
+	display: none;
+	font-style: italic;
+	font-size: 12px;
+	background: none;
+}
+
+div#EventsTable ul.week li.highday a span.day {
+	color: #d71921;
+}
+
+div#EventsTable ul.week li.passed.highday a span.day {
+	color: #b3b3b3;
+}
+
+div#EventsTable ul.week li.highday a span.dayname {
+	color: #d71921;
+}
+
+div#EventsTable ul.week li.passed.highday a span.dayname {
+	color: #b3b3b3;
+}
+
+div#EventsTable ul.week.active li a span.day {
+	border-bottom: 0;
+	background: none;
+	height: 22px;
+}
+
+div#EventsTable ul.week.active li a span.dayname {
+	display: block;
+	width: 100%;
+	float: left;
+	height: 26px;
+	background: url("sprite_d.png") 0px -477px;
+}
+
+div#EventsTable ul.week li dl {
+	display: none;
+	margin: 0px 8px 0px 7px;
+	width: 84px;
+	word-wrap: break-word;
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+	float: left;
+}
+
+div#EventsTable ul.week.active li dl {
+	display: block;
+}
+
+div#EventsTable ul.week li dl dt {
+	font-size: 11px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+	line-height: 15px;
+	color: #03694e;
+}
+
+div#EventsTable ul.week li dl dd {
+	font-size: 11px;
+	font-family: Arial;
+	font-weight: normal;
+	line-height: 13px;
+	color: #40403d;
+	margin-bottom: 18px;	
+}
+
+div#EventsTable ul.week li dl dd a {
+	text-decoration: none;
+	color: #40403d;
+	padding: 0;
+	margin: 0;
+	background: #fff;
+	filter: none;
+}
+
+div#EventsTable ul.week li dl dd a:hover {
+	text-decoration: underline;
+}
+
+div#EventsTable ul.week li dl dt span {
+	color: #d71921;
+	font-size: 11px;
+	line-height: 11px;
+	font-weight: bold;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+div#EventsTable ul.week li dl dt a.more-green {
+	padding-bottom: 2px;
+}
+
+/*
+	Events end page
+*/
+
+div.event-header {
+	width: 496px;
+	position: relative;
+	padding: 2px;
+	display: block;
+	clear: both;
+	margin: 4px 0px 50px -10px;
+	float: left;
+	background: url("sprite_g.png") 0px -500px no-repeat;	
+}
+
+div.event-header .inner {
+	background: #fff url(Item_bac.jpg) 0 0 repeat-x;
+    background-image: -moz-linear-gradient(top, #f2f2f2, #ffffff);
+    background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#ffffff));
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#f2f2f2', EndColorStr='#ffffff', GradientType=0);	
+}
+
+div#Page div#Content div.article div.event-header .inner h3 {
+	color: #ffffff;
+	font-style: normal;
+	top: -5px;
+	position: absolute;
+}
+
+div.event-header .inner span.time {
+	padding: 12px 0 0 86px;
+	display: block;
+}
+
+div.event-header .inner span.ministry {
+	padding: 0 0 0 86px;
+	display: block;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #40403d;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+div.event-header .inner span.ministry strong {
+	font-weight: bold;
+}
+
+div.attendance-list {
+	padding-top: 20px;
+	width: 500px;
+	margin-left: -10px;
+	clear: both;
+	display: block;
+}
+
+div.attendance-list h2 {
+	padding-left: 10px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	line-height: 20px;
+	color: #191919;
+	margin-bottom: 28px;
+}
+
+div.attendance-list ul {
+	position: relative;
+}
+
+div.attendance-list li {
+	width: 500px;	
+	vertical-align: top;
+	float: left;
+	clear: both;
+	position: relative;
+	margin-bottom: 15px;
+}
+
+div.attendance-list li img {
+	width: 86px;
+	height: 86px;
+	overflow: hidden;
+	vertical-align: top;	
+	padding: 1px;
+	border: 1px #c8c8c7 solid;
+	position: relative;
+	float: left;
+}
+
+div.attendance-list li span.t { 
+	line-height: 18px;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #40403d;
+	display: table-row;
+	float: left;
+	padding-left: 20px;
+	width: 390px;
+	height: 90px;
+	left: 110px;
+}
+
+div.attendance-list li span.t span { 
+	display: table-cell;
+	vertical-align: middle;
+	height: 90px;
+}
+
+div.attendance-list li span strong {
+	font-weight: bold;
+	clear: both;
+	width: 390px;
+	display: block;
+}
+
+/*
+	*************** Form elements *************** 
+*/
+
+div.form fieldset {
+	width: 500px;
+	padding-bottom: 56px;
+	background: url("sprite_t.png") left bottom no-repeat;
+}
+
+div.form fieldset.wide {
+	width: 100%;
+	padding-bottom: 56px;
+	background: url("sprite_t.png") right bottom no-repeat;	
+}
+
+div.form fieldset:last-child {
+	background: none;
+	padding-bottom: 0;
+	margin-top: -28px;
+}
+
+div.form fieldset h3.block {
+	margin: 1px 0 8px 0;
+}
+
+div.form p.info {
+	margin: 0 0 12px 0;	
+}
+
+div.form div.element {
+	width: 500px;
+	height: 60px;
+	margin: 0 0 4px 0;
+	float: left;
+	clear: both;
+	position: relative;
+}
+
+div.form div.element-inline {
+	clear: none;
+	width: auto;
+	display: inline;
+}
+
+div.form div.element span.c {
+	width: 100px;
+	height: 60px;
+	display: table-cell;
+	vertical-align: middle;
+	line-height: 14px;
+}
+
+div.form div.element-inline span.c {
+	display: inline;
+	line-height: 44px;	
+}
+
+div.form div.element span.c label,
+div.form div.element-checklist span.c span,
+div.filter ul li label,
+div.filter ul li span.field {
+	position: relative;
+}
+
+div.form div.element span.c label sup,
+div.form div.element-checklist span.c span sup {
+	position: absolute;
+	left: -10px;
+	top: 1px;
+	color: #d32026;
+	font-size: inherit;
+	font-weight: bold;
+}
+
+div.form div.element span.wa {
+	width: auto;	
+}
+
+div.form div.element span.field,
+div.filter ul li span.field {
+	float: left;	
+}
+
+div.form div.element-captcha span.c {
+	width: 380px;
+	padding: 0 0 0 110px;
+}
+
+div.form div.element-text span.field,
+div.form div.element-select span.field {
+	width: 380px;
+	border: 1px solid #939391;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;	
+	-moz-box-shadow: 0px 0px 8px rgba(64, 64, 61, 0.3);
+  	-webkit-box-shadow: 0px 0px 8px rgba(64, 64, 61, 0.3);
+  	box-shadow: 0px 0px 8px rgba(64, 64, 61, 0.3);
+	background: #fff;
+	margin: 0 0 0 10px;
+}
+
+div.form div.element-text span.field input,
+div.form div.element-text span.field textarea,
+div.form div.element-select span.field span.selected {
+	width: 346px;
+	height: 16px;
+	padding: 7px 15px;
+	margin: 1px;
+	border: 1px solid #d8d8d8;
+	background: #fefefe url(Item_bac.jpg) 0 0 repeat-x;
+    background-image: -moz-linear-gradient(top, #f5f5f5, #fefefe);
+    background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#fefefe));
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#f5f5f5', EndColorStr='#fefefe', GradientType=0);	
+	color: #666;
+}
+
+div.form div.element-text span.field textarea {
+	background: #fefefe url(Item_bac.jpg) 0 0 repeat-x;
+    background-image: -moz-linear-gradient(top, #f5f5f5, #fefefe);
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	div.form div.element-text span.field textarea {
+		margin-bottom: -1px;	
+	}
+}
+
+div.form div.element-textarea,
+div.form div.element-checklist {
+	height: auto;
+}
+
+div.form div.element-checklist {
+	margin-top: 20px;
+}
+
+div.form div.element-textarea span.c,
+div.form div.element-checklist span.c {
+	width: 100px;
+	height: auto;
+	float: left;
+	display: block;
+}
+
+div.form div.element-textarea span.c,
+div.form div.element-checklist span.c {
+	margin-top: 12px;
+}
+
+div.form div.element-checklist span.cl {
+	width: 388px;	
+	margin: 0 -1px 0 7px;
+}
+
+div.form div.element-checklist span.c span.field {
+	top: 0;
+}
+
+div.form div.element-checklist span.c ul,
+div.filter ul {
+	width: 184px;
+	margin: 9px 10px 0 0;
+	float: left;
+}
+
+div.form div.element-checklist span.c ul li,
+div.filter ul li {
+	width: 184px;
+	margin-bottom: 4px;
+	float: left;
+	clear: both;
+	font-size: 12px;
+	line-height: 14px;
+}
+
+div.form div.element-textarea span.c label {
+	top: 6px;
+}
+
+div.form div.element-checklist span.c label,
+div.filter ul li label {
+	float: left;
+	width: 157px;
+	padding-bottom: 7px;
+	top: 3px;
+	left: 6px;
+}
+
+div.newsletter-registration-form div.filter ul {
+	margin: 0 10px 23px 0;	
+}
+
+div.newsletter-registration-form div.filter ul,
+div.newsletter-registration-form div.filter ul li {
+	width: 340px;
+}
+
+div.newsletter-registration-form div.filter ul li label {
+	width: 313px;
+}
+
+div.filter ul li.group,
+div.filter ul li.group label {
+	color: #40403d;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: #fff 0px 1px 0px, #d9d9d8 0px 2px 0px;
+	letter-spacing: 1px;
+}
+
+div.filter ul li.group a:hover {
+	color: #000;
+	text-decoration: none;
+	text-shadow: #fff 0px 1px 0px, #ccc 0px 2px 0px;	
+}
+
+div.filter ul li.group.checked label {
+	color: #03694e;	
+}
+
+div.form div.element-text span.field textarea {
+	height: auto;
+}
+
+div.form div.element-select span.field {
+	position: relative;
+}
+
+div.form div.element-select span.field span.selected {
+	display: block;
+	height: 16px;
+	line-height: 16px;
+	background: #fefefe url("sprite_g.png") right -165px no-repeat;
+    background: url("sprite_g.png") right -165px no-repeat;
+    background: url("sprite_g.png") right -165px no-repeat;
+}
+
+div.form div.element-select span.field select {
+	width: 378px;
+	height: 32px;
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	opacity: 0.01;
+	filter: alpha(opacity=1);
+}
+
+div.form div.element-select-wide {
+	width: 700px;	
+}
+
+div.form div.element-select-wide span.field {
+	width: 580px;
+}
+
+div.form div.element-select-wide span.field span.selected {
+	width: 526px;
+	padding-right: 35px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+div.form div.element-select-wide span.field span.selected span {
+	width: 526px;
+	overflow: hidden;
+	display: block;
+}
+
+div.form div.element-select-wide span.field select {
+	width: 578px;
+}
+
+div.form div.element-checklist ul li.checked,
+div.form div.element-single-checkbox.checked,
+div.form div.element-single-checkbox span.l a,
+div#Page div.form div#Content div.element span.t a,
+div.filter ul li.checked {
+	color: #03694e;
+}
+
+div#Page div.form div#Content div.element span.t a {
+	margin-left: 10px;
+}
+
+div.form div.element-single-checkbox span.i {
+	width: 21px;
+}
+
+div.form div.element-single-checkbox label {
+	cursor: pointer;	
+}
+
+div.form div.element-checkboxlist span.c ul li span.field,
+div.form div.element-single-checkbox span.i span.field,
+div.form div.element-radiolist span.c ul li span.field,
+div.filter ul li span.field {
+	width: 21px;
+	height: 21px;
+	border: 0;	
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;	
+	-moz-box-shadow: none;
+  	-webkit-box-shadow: none;
+  	box-shadow: none;	
+	background: #fff url("sprite_g.png") -300px -200px no-repeat;
+}
+
+div.form div.element-single-checkbox span.i span.field {
+	margin: 0 8px 0 107px;	
+}
+
+div.form div.element-inline span.i span.field {
+	margin: 11px 8px 0 107px;	
+}
+
+div.form div.element-checklist span.c ul li.checked span.field,
+div.form div.element-single-checkbox.checked span.i span.field,
+div.filter ul li.checked span.field {
+	background-position: -325px -200px;	
+}
+
+div.form div.element-checkboxlist span.c ul li span.field input,
+div.form div.element-radiolist span.c ul li span.field input,
+div.form div.element-single-checkbox span.i span.field input,
+div.filter ul li span.field input {
+	width: 13px;
+	height: 13px;
+	margin: 4px 0 0 4px;
+	opacity: 0.01;
+	filter: alpha(opacity=1);
+	cursor: pointer;
+}
+
+div.form div.element-radiolist span.c ul li span.field {
+	background-position: -375px -200px;
+}
+
+div.form div.element-radiolist span.c ul li.checked span.field {
+	background-position: -350px -200px;
+}
+
+div.form div.element-multiple,
+div.form div.element-multiple span.m {
+	height: auto;	
+}
+
+div.form div.element-multiple span.c:first-child {
+	vertical-align: top;
+	padding-top: 4px;
+}
+
+div.form div.element-multiple span.m span.field {
+	margin-bottom: 12px;
+}
+
+div.form div.element-multiple span.field.editable {
+	position: relative;
+}
+
+div.form div.element-multiple span.field.editable input {
+	padding: 7px 40px 7px 15px;
+	width: 321px;
+}
+
+div.form div.element-multiple span.field.editable a.delete {
+	position: absolute;
+	outline: none;
+	right: 7px;
+	top: 7px;
+	width: 25px;
+	height: 20px;
+	background: url("sprite_i.png") -575px -350px no-repeat;
+	text-indent: -9999px;
+}
+
+div.form div.element-multiple span.field.editable a.delete:hover {
+	background-position: -575px -400px;
+}
+
+div.form div.element-multiple span.field.editable a.delete:focus {
+	outline: none;
+}
+
+div.form div.element-error span.field {
+	border-color: #d92028;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;	
+}
+
+div.form div.element-error small {
+	position: absolute;
+	top: -5px;
+	right: 8px;
+	color: #d92028;
+}
+
+div.form div.element-checklist small {
+	position: static;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+/*
+	Newsletter registration
+*/
+
+div#Page div.three-column-newsletter div#Content {
+	width: 340px;
+	margin-right: 30px;	
+}
+
+div#Page div.three-column-newsletter div#Content h3 {
+	margin-bottom: 30px;
+}
+
+div#Page div.three-column-newsletter div#Right {
+	width: 340px;
+	margin: 0 10px 0 0;
+}
+
+div#Page div.three-column-newsletter div#Right h3 {
+	margin-bottom: 11px;
+}
+
+div.three-column-newsletter fieldset {
+	width: 340px;
+	background-image: url("sprite_t.png");	
+}
+
+div.three-column-newsletter div#Content fieldset:last-child {
+	margin-top: 0;
+}
+
+div.three-column-newsletter div.element {
+	font-size: 12px;
+	width: 340px;	
+}
+
+div.three-column-newsletter div.element span.c {
+	width: 75px;	
+}
+
+div.three-column-newsletter div.element-text span.field {
+	width: 265px;	
+}
+
+div.three-column-newsletter div.element-text span.field input {
+	width: 231px;
+}
+
+div.three-column-newsletter div.element-single-checkbox span.wa {
+	width: auto;	
+}
+
+div.three-column-newsletter div.element-single-checkbox span.fr {
+	width: auto;
+	float: right;
+	display: block;
+	height: auto;
+	clear: both;
+	margin-right: -5px;
+}
+
+div.three-column-newsletter div.element-single-checkbox span.i span.field {
+	margin-left: 70px;	
+}
+
+/*
+	Questionnaire
+*/
+
+div.form div.questionnaire-form div.element-textarea span.c,
+div.form div.questionnaire-form div.element-checklist span.c {
+	width: auto;
+	clear: both;
+}
+
+div.form div.questionnaire-form div.element-textarea span.c,
+div.form div.questionnaire-form div.element-checklist span.c {
+	margin-top: 0;
+}
+
+div.form div.questionnaire-form div.element-textarea span.c label,
+div.form div.questionnaire-form div.element-checklist span.c span {
+	line-height: 18px;
+	font-weight: bold;
+}
+
+div.form div.questionnaire-form div.element-checklist span.cl {
+	width: 493px;
+	line-height: 14px;
+}
+
+div.form div.questionnaire-form div.element-checklist span.c span.field {
+	top: 0;
+	font-weight: normal;
+}
+
+div.form div.questionnaire-form div.element-textarea span.c span.field {
+	margin: 12px 0 0 -10px;	
+	font-weight: normal;
+	width: 508px;
+}
+
+div.form div.questionnaire-form div.element-textarea span.c span.field textarea {
+	padding: 7px;
+	width: 490px;
+}
+
+div.form div.questionnaire-form div.element-checklist span.c ul {
+	width: 493px;
+	margin: 12px 0 0 0;
+}
+
+div.form div.questionnaire-form div.element-checklist span.c ul li {
+	width: 493px;
+}
+
+div.form div.questionnaire-form div.element-textarea span.c label {
+	top: auto;
+}
+
+div.form div.questionnaire-form div.element-checklist span.c label {
+	width: 466px;
+}
+
+div.form div.questionnaire-form div.element-error small {
+	position: static;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+/*
+	Definitions for various forms
+*/
+
+div.press-registration-form div.element span.c span.button-99 {
+	margin: 0 0 0 24px;
+}
+
+div.press-login-form div.element span.t span.field {
+	width: 281px;
+	margin: 0 0 0 109px;
+	line-height: 18px;
+}
+
+div.press-recovery-form div.element span.fr {
+	margin-right: 3px;
+}
+
+/*
+	Press search sign-up form
+*/ 
+
+div.sign-up-form {
+	width: 598px;	
+}
+
+div.sign-up-form.narrow {
+	width: 480px;
+}
+
+div.sign-up-form.form fieldset {
+	width: 586px;
+	padding-bottom: 15px;	
+	padding-left: 12px;	
+	background: none;	
+}
+
+div.sign-up-form.form.narrow fieldset {
+	width: 468px;
+}
+
+div.sign-up-form.form fieldset:first-child {
+	padding-bottom: 64px;	
+	margin-bottom: -36px;
+	background: url("sprite_t.png") left bottom no-repeat;	
+}
+
+div.sign-up-form.narrow fieldset:first-child {
+	background: url("sprite_t.png") -10px bottom no-repeat;	
+}
+
+div.sign-up-form div.element {
+	width: 100%;
+	height: auto;
+}
+
+div.sign-up-form div.element span.c {
+	vertical-align: top;
+	padding-top: 6px;
+}
+
+div.sign-up-form div.element span.s {
+	vertical-align: middle;
+	width: 380px;
+}
+
+div.sign-up-form div.element-multiple span.c.m {
+	padding-top: 0px;
+}
+
+div.sign-up-form div.element span.c span.field,
+div.sign-up-form div.element span.c span.field.ta {
+	margin-left: 89px;
+}
+
+div.sign-up-form.narrow div.element span.c span.field,
+div.sign-up-form.narrow div.element span.c span.field.ta {
+	margin-left: -15px;
+}
+
+div.sign-up-form div.element-textarea {
+	margin-top: 21px;	
+}
+
+div.form div.element span.c span.field textarea {
+	height: 134px;
+}
+
+div.sign-up-form div.element span.c label {
+	font-size: 12px;
+	line-height: 16px;
+	color: #40403d;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+div#Page div#Content div.sign-up-form p a {
+	color: #40403d;
+}
+
+div.sign-up-form div.element span.c span.multiple-add a {
+	margin-left: 89px;
+	padding-left: 31px;
+	width: 149px;
+	float: left;
+	height: 20px;
+	font-size: 10px;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 20px;
+	color: #40403d;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	background: url("sprite_g.png") -500px -200px no-repeat;
+}
+
+div.sign-up-form.narrow div.element span.c span.multiple-add a {
+	margin-left: -15px;
+}
+
+div.sign-up a.delete-registration {
+	width: 24px;
+	height: 20px;
+	float: right;
+	margin: -40px 10px 0 0;
+	outline: 0;
+}
+
+div.article-list div.sign-up a.delete-registration {
+	margin-right: 0;
+}
+
+div.sign-up a.delete-registration span {
+	background-position: right -250px;	
+}
+
+div.sign-up a.delete-registration:hover span {
+	background-position: right -300px;	
+}
+
+/*
+	Press Q&A form
+*/
+
+div.question-answer-form.form {
+	margin-bottom: 16px;	
+}
+
+div.question-answer-form.form fieldset {
+	width: 710px;
+	background: none;
+	float: left;
+	padding-bottom: 0px;
+	margin-bottom: 23px;
+}
+
+div.question-answer-form.form fieldset:last-child {
+	margin-top: -8px;
+}
+
+div.question-answer-form.form fieldset.shadow {
+	background: url("sprite_t.png") right 65px no-repeat;
+	margin-bottom: 0;
+	padding-bottom: 46px;
+}
+
+div.question-answer-form.form div.element {
+	height: auto;
+	width: 710px;
+}
+
+div.question-answer-form.form div.element span.c {
+	height: auto;
+	display: block;
+	float: left;
+	position: static;
+	vertical-align: top;
+}
+
+div.question-answer-form.form div.element-text span.c span.field {
+	width: 583px;
+	height: 118px;
+	margin-left: 25px;
+	top: auto;
+}
+
+div.question-answer-form.form div.element-text span.c span.field textarea {
+	width: 549px;
+	height: 84px;
+	padding: 15px;
+	top: auto;
+}
+
+div.question-answer-form.form div.element span.wa {
+	float: right;
+	margin-right: -5px;
+}
+
+div.question-answer-form.form div.element span.c label {
+	margin-top: 13px;
+	float: left;
+	font-size: 12px;
+	line-height: 16px;
+	color: #40403d;
+	font-family: Arial;	
+}
+
+/*
+	Buttons
+*/
+
+span.button-99,
+span.button-119,
+span.button-159 {
+	width: 107px;
+	height: 44px;
+	float: left;
+	display: block;
+	background: url("sprite_g.png") -50px -300px no-repeat;
+}
+
+span.button-99:hover {
+	background-position: -175px -300px;
+}
+
+span.button-99 input,
+span.button-119 input,
+span.button-159 input {
+	width: 97px;
+	height: 34px;
+	padding: 0;
+	margin: 3px 5px 7px 5px;
+	border: 0;
+	background: transparent;
+	color: #fff;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	font-weight: bold;
+	font-style: italic;
+	text-shadow: #01563f 0px 1px 0px, #347765 0px 2px 0px;
+	text-align: center;
+	line-height: 32px;
+	cursor: pointer;
+}
+
+span.button-99.disabled {
+	background-position: -300px -300px;	
+}
+
+span.button-99.disabled input,
+span.button-119.disabled input,
+span.button-159.disabled input {
+	text-shadow: #aaa 1px 1px 0px;
+	color: #666;
+}
+
+span.button-119 {
+	width: 127px;
+	background-position: -50px -350px;
+}
+
+span.button-119:hover {
+	background-position: -200px -350px;
+}
+
+span.button-119 input {
+	width: 117px;
+}
+
+span.button-119.disabled  {
+	background-position: -350px -350px;	
+}
+
+span.button-159 {
+	width: 167px;
+	background-position: -50px -400px;
+}
+
+span.button-159:hover {
+	background-position: -225px -400px;
+}
+
+span.button-159 input {
+	width: 157px;
+}
+
+span.button-159.disabled  {
+	background-position: -400px -400px;	
+}
+
+/* 
+	*************** Gallery ***************
+*/
+
+div.gallery div.gallery-content,
+div.gallery div.gallery-caption,
+div.gallery div.gallery-container,
+div.gallery div.gallery-pager,
+div.gallery div.gallery-tools {
+	margin-left: -10px;	
+}
+
+div.gallery div.gallery-content {
+	overflow: hidden;	
+	position: relative;
+}
+
+div.gallery div.gallery-content > a {
+	font-size: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #666666;
+	font-style: italic;
+	font-weight: bold;
+	position: relative;
+	line-height: 27px;
+	padding-top: 2px;
+}
+
+div.gallery div.gallery-content > a:hover {
+	text-decoration: none;
+}
+
+div.gallery div.gallery-content > a span {
+	font-weight: normal;
+	font-style: normal;
+	color: #d1171f;
+	top: 0px;
+	padding-top: 2px;
+}
+
+div.gallery div.gallery-content > a span.gallery.download {
+    background-position: 0 -200px;
+}
+
+div.gallery div.gallery-content > a span span {
+	display: inline;
+	position: relative;
+	float: right;
+	top: -2px;
+}
+
+div.gallery div.gallery-content > div {
+	margin-left: 50%;
+	float: left;
+	margin-top: 5px;
+}
+
+div.gallery div.gallery-content span.gallery-photo {
+	margin-left: -50%;
+	float: left;
+}
+
+div.gallery div.gallery-content img {
+	padding: 1px;
+	border: 1px solid #ccc;
+	float: left;
+	background: #fff;
+	cursor: pointer;
+}
+
+div.gallery div.gallery-caption {
+	width: 690px;
+	padding: 10px 20px 25px 20px;
+	background: url("sprite_t.png") 0 bottom no-repeat;
+	color: #808080;
+	font-size: 11px;
+	line-height: 14px;
+	text-align: center;
+}
+
+div.gallery div.gallery-container {
+	width: 730px;
+	height: 116px;
+	position: relative;
+	overflow: hidden;
+}
+
+div.gallery div.gallery-container ul.gallery-list {
+	width: 20000em;
+	position: absolute;
+	margin: 0 -5px;
+}
+
+div.gallery div.gallery-container ul.gallery-list li {
+	float: left;
+	margin: 19px 5px;
+}
+
+div.gallery div.gallery-container ul.gallery-list li a {
+	float: left;	
+	position: relative;
+}
+
+div.gallery div.gallery-container ul.gallery-list li a img {
+	padding: 1px;
+	border: 1px solid #c5c5c4;
+	float: left;
+	background: #fff;
+}
+
+div.gallery div.gallery-container ul.gallery-list li.selected {
+	margin: 16px 2px
+}
+
+div.gallery div.gallery-container ul.gallery-list li.selected a img {
+	padding: 4px;	
+}
+
+div.gallery div.gallery-container ul.gallery-list li.selected span {
+	position: absolute;	
+	width: 100%;
+	height: 16px;
+}
+
+div.gallery div.gallery-container ul.gallery-list li.selected span.t {
+	top: -15px;
+	left: 0;
+	background: url("Thumbnai.png")	center bottom no-repeat, url("Thumbnai.png") center top no-repeat;
+	-moz-background-size: auto auto, 100% 200%;
+	-o-background-size: auto auto, 100% 200%;
+	-webkit-background-size: auto auto, 100% 200%;
+	background-size: auto auto, 100% 200%; 	
+}
+
+div.gallery div.gallery-container ul.gallery-list li.selected span.b {
+	bottom: -15px;
+	left: 0;
+	background: url("Thumbnai.png") 0 0 no-repeat;
+	-moz-background-size: 100% 200%;
+	-o-background-size: 100% 200%;  
+	-webkit-background-size: 100% 200%;
+	background-size: 100% 200%; 
+	background-position: center bottom;	
+}
+
+div.gallery div.gallery-container ul.gallery-list li.selected span img {
+	border: 0;
+	padding: 0;
+	position: absolute;
+	z-index: 2;
+	background: none;
+}
+
+div.gallery div.gallery-container ul.gallery-list li.selected span.t span.tick {
+	width: 9px;
+	height: 7px;
+	left: 50%;
+	margin: 9px 0 0 -4px;
+	z-index: 3;
+	background: url("Thumbnai.png")	center bottom no-repeat;
+}
+
+div.gallery div.gallery-pager {
+	width: 730px;
+	height: 40px;
+	position: relative;
+	background: url("sprite_t.png") -730px top no-repeat;
+}
+
+div.gallery div.gallery-content a.previous,
+div.gallery div.gallery-content a.next,
+div.gallery div.gallery-pager a.previous,
+div.gallery div.gallery-pager a.previous-disabled,
+div.gallery div.gallery-pager a.next,
+div.gallery div.gallery-pager a.next-disabled {
+	width: 60px;
+	height: 20px;
+	outline: 0;
+	display: block;
+	position: absolute;
+	top: 10px;
+}
+
+div.gallery div.gallery-content a.previous,
+div.gallery div.gallery-content a.next,
+div.gallery div.gallery-content a.previous-disabled,
+div.gallery div.gallery-content a.next-disabled {
+	top: 196px;
+}
+
+div.gallery div.gallery-content a.previous {
+	width: 50px;
+	left: 58px;
+	display: none;
+}
+
+div.gallery div.gallery-pager a.previous,
+div.gallery div.gallery-pager a.previous-disabled {
+	left: 10px;
+}
+
+div.gallery div.gallery-content a.next {
+	width: 50px;	
+	right: 58px;
+	display: none;	
+}
+
+div.gallery div.gallery-pager a.next,
+div.gallery div.gallery-pager a.next-disabled {
+	right: 10px;
+}
+
+div.gallery div.gallery-content a.previous-disabled,
+div.gallery div.gallery-content a.next-disabled,
+div.gallery div.gallery-pager a.previous-disabled,
+div.gallery div.gallery-pager a.next-disabled {
+	cursor: default;
+}
+
+div.gallery div.gallery-content a.previous span {
+	background-position: -345px -50px;		
+}
+
+div.gallery div.gallery-pager a.previous span {
+	background-position: -335px -50px;	
+}
+
+div.gallery div.gallery-content a.previous-disabled span {
+	background-position: -285px -50px;		
+}
+
+div.gallery div.gallery-pager a.previous-disabled span {
+	background-position: -275px -50px;	
+}
+
+div.gallery div.gallery-content a.next span {
+	background-position: -455px -50px;		
+}
+
+div.gallery div.gallery-pager a.next span {
+	background-position: -455px -50px;	
+}
+
+div.gallery div.gallery-content a.next-disabled span,
+div.gallery div.gallery-pager a.next-disabled span {
+	background-position: -395px -50px;	
+}
+
+div.gallery div.gallery-pager p {
+	width: 100px;
+	height: 20px;
+	margin-left: -50px;
+	position: absolute;
+	left: 50%;
+	top: 10px;
+	color: #797977;
+	font-size: 11px;
+	text-align: center;
+	line-height: 20px;
+}
+
+div.gallery div.gallery-pager p b {
+	color: #d71921;
+}
+
+div#Page div#Content.gallery div.article-body {
+	margin: 27px 0 0 0;
+	width: 720px;
+}
+
+div#Page div#Content.gallery div.article-tools {
+	width: 730px;
+}
+
+div#Page div#Content.gallery div.article-tools ul {
+	width: 710px;
+}
+
+div#Page div#Content.gallery div.article-foot {
+	width: 730px;	
+	margin: 60px 0 42px -10px;
+}
+
+div#Page div#Content.gallery div.article-foot div.media-box {
+	width: 200px;
+	float: left;
+	margin-right: 35px;
+	margin-top: -9px;
+}
+
+div#Page div#Content.gallery div.article-foot div.media-box.double-tab-box {
+	margin-top: -7px;	
+}
+
+div#Page div#Content.gallery div.article-foot div.media-box h3 {
+	margin-left: 10px;	
+	margin-bottom: 9px;
+}
+
+div#Page div#Content.gallery div.article-foot div.media-box.double-tab-box h3 {
+	margin-left: 0;
+}
+
+div#Page div#Content.gallery div.article-foot div.related-box {
+	float: left;
+	margin: 0 10px 0 40px;
+}
+
+div#Page div#Content.gallery div.article-foot div.related-box,
+div#Page div#Content.gallery div.article-foot div.related-box dl {
+	width: 215px;	
+}
+
+div#Page div#Content.gallery div.article-foot div.related-box-2,
+div#Page div#Content.gallery div.article-foot div.related-box-2 dl {
+	width: 180px;	
+}
+
+/*
+	*************** Glossary ***************
+*/
+
+div#Page div.glossary {
+	padding-top: 43px;	
+}
+
+div#Page div.four-column.glossary dl {
+	float: left;
+	width: 240px;
+}
+
+div#Page div.four-column.glossary dl dt {
+	float: left;
+	width: 180px;
+	padding: 0 10px;
+	color: #40403d;
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 14px;
+	padding-bottom: 4px;
+	cursor: pointer;
+}
+
+div#Page div.four-column.glossary dl dt:hover {
+	color: #03694e;
+	text-decoration: underline;
+}
+
+div#Page div.four-column.glossary dl dd {
+	display: none;
+}
+
+body.Glossary div.inner-submenu ul li,
+body.Glossary div.inner-submenu ul li a {
+	width: 36px;
+	padding: 0;
+	margin: 0;
+}
+
+body.Glossary div.inner-submenu ul li.active a {
+	font-weight: bold;
+}
+
+/* 
+	*************** Search *************** 
+*/
+
+div#SearchForm {
+	height: 153px;
+}
+
+div#SearchForm div.wrap {
+	height: 153px;
+	position: relative;
+}
+
+div#SearchForm div.form-holder {
+	left: 230px;
+	top: 43px;
+	width: 486px;
+	height: 38px;
+	position: relative;
+	border: solid #939391;
+	border-width: 1px;
+	padding: 1px;
+	-moz-box-shadow: 0px 0px 8px rgba(64, 64, 61, 0.3);
+  	-webkit-box-shadow: 0px 0px 8px rgba(64, 64, 61, 0.3);
+  	box-shadow: 0px 0px 8px rgba(64, 64, 61, 0.3);		
+}
+
+div#SearchForm div.form-holder form {
+	border: solid #d8d8d8;
+	border-width: 1px;
+	height: 36px;
+	background: #fff;
+    background: -moz-linear-gradient(top, #f5f5f5, #ffffff);
+    background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#ffffff));
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#f5f5f5', EndColorStr='#ffffff', GradientType=0);		
+}
+
+div#SearchForm input.text {
+	background: none;
+	line-height: 36px;
+	color: #666666;
+	font-size: 18px;
+	padding: 0 17px;
+	border: none;
+	height: 36px;
+	width: 418px;
+	font-family: Georgia, "Times New Roman", Times, serif;	
+	font-style: italic;
+	float: left;
+}
+
+div#SearchForm input.submit {
+	background: url("sprite_i.png") -50px -75px no-repeat;
+	width: 22px;
+	height: 22px;
+	border: none;
+	cursor: pointer;
+	text-indent: -9999px;
+	margin-top: 7px;
+	float: left;
+}
+
+div#SearchForm div.form-description {
+	right: 10px;
+	position: absolute;
+	top: 18px;
+	width: 180px;
+}
+
+div#SearchForm div.form-description h3 {
+	width: 100%;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 18px;
+	color: #40403d;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+div#SearchForm div.form-description span {
+	width: 100%;
+	color: #666666;
+	font-family: Arial;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+div#SearchForm div.form-description a {
+	color: #1d7a62;
+	text-decoration: none;
+}
+
+div#SearchForm div.search-tabs {
+	height: 38px;
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	bottom: -2px;
+}
+
+div#SearchForm div.search-tabs ul {
+	margin-left: 226px;
+}
+
+div#SearchForm div.search-tabs ul li {
+	height: 39px;
+	float: left;
+	position: relative;
+	padding-left: 18px;
+}
+
+div#SearchForm div.search-tabs ul li.active {
+	background: #ffffff url("sprite_g.png") 0px -100px no-repeat;
+}
+
+div#SearchForm div.search-tabs ul li a {
+	padding-top: 2px;
+	height: 37px;
+	line-height: 37px;
+	padding-right: 18px;
+	display: block;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10px;
+	color: #797977;
+	text-shadow: #fff 0px 1px 0px, #d9d9d8 0px 2px 0px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+div#SearchForm div.search-tabs ul li.active a {
+	padding-top: 0px;
+	color: #333333;
+	height: 39px;
+	line-height: 39px;
+	font-size: 12px;	
+	background: #ffffff url("sprite_g.png") right -50px no-repeat;
+}
+
+div#SearchForm div.search-tabs ul li a:hover {
+	text-decoration: none;
+}
+
+div#SearchForm div.search-tabs ul li a:focus {
+	outline: none;
+}
+
+div#SearchForm div.search-tabs ul li a span {
+	color: #b3b3b3;
+	font-size: 11px;
+	text-shadow: none;
+	font-weight: bold;
+	letter-spacing: 0px;
+	padding-left: 2px;
+}
+
+div#SearchForm div.search-tabs ul li.active a span {
+	color: #03694e;
+	font-size: 14px;
+}
+
+/*
+	Calendar selector
+*/
+
+div#Left div.calendar-selector {
+	width: 180px;
+	position: relative;
+	margin-bottom: 38px;
+}
+
+div#Left div.calendar-selector span {
+	color: #666666;
+	font-size: 12px;
+	font-family: Arial;
+	line-height: 18px;
+	width: 100%;
+	display: block;
+	padding-top: 3px;
+	clear: left;
+	position: relative;
+}
+
+div#Left div.calendar-selector span.title {
+	color: #b3b3b3;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10px;
+	line-height: 16px;	
+	font-style: italic;
+}
+
+div#Left div.calendar-selector span input {
+	cursor: pointer;
+	height: 21px;
+	line-height: 21px;
+	padding-left: 32px;
+	float: left;
+	border: none;
+	background: url("sprite_i.png") -275px -25px no-repeat;
+	margin-bottom: 2px;
+	text-transform: lowercase;
+}
+
+div#Left div.calendar-selector span input.active {
+	background-position: -275px 0px;
+}
+
+div#Left div.calendar-selector span a.clear {
+	width: 24px;
+	height: 20px;
+	position: absolute;
+	right: 0px;
+	top: 5px;
+	z-index: 10000;
+	cursor: pointer;
+	background: transparent url("sprite_i.png") right -250px no-repeat;
+	text-indent: -9999px;
+	display: none;
+}
+
+div#Left div.calendar-selector span a.clear:hover {
+	background: transparent url("sprite_i.png") right -300px no-repeat;
+}
+
+/*
+	Filter
+*/
+
+div#Page div#Left ul.plus-sign li a {
+	padding: 1px 0px 2px 24px;
+	display: block;
+	color: #666666;
+	background: url("sprite_i.png") -583px -44px no-repeat;	
+}
+
+div#Page div#Left ul.plus-sign li.active a {
+	color: #03694e;
+	background: url("sprite_i.png") -583px -119px no-repeat;	
+}
+
+/*
+	SearchTab containers
+*/
+
+body.Search div#Page div.list-tab-container {
+	display: none;
+}
+
+body.Search div#Page div.list-tab-container div.article {
+	display: block;
+	clear: both;
+}
+
+body.Search div#Page div.list-tab-container.active,
+body.Search.VideoListEnd div#Page div.list-tab-container {
+	display: block;
+}
+
+body.Search div#Page div#Content div.column-footer.pager {
+	width: 730px;
+	margin-left: -10px;
+}
+
+/* 
+	*************** Video *************** 
+*/
+
+div#Page div#Content.video-player div.article-body {
+	margin: 0 0 0 0;
+	width: 720px;
+}
+
+div#Page div#Content.video-player div.article-tools {
+	width: 730px;
+	margin: 0px 0 0 -10px;
+}
+
+div#Page div#Content.video-player div.article-tools ul {
+	width: 710px;
+}
+
+div#Page div#Content.video-player div.article-foot {
+	width: 730px;	
+	margin: 60px 0 42px -10px;
+}
+
+div#Page div#Content.video-player div.article-foot div.media-box {
+	width: 200px;
+	float: left;
+	margin-right: 35px;
+	margin-top: -9px;
+}
+
+div#Page div#Content.video-player div.article-foot div.media-box.double-tab-box {
+	margin-top: -7px;
+}
+
+div#Page div#Content.video-player div.article-foot div.media-box h3 {
+	margin-left: 10px;	
+	margin-bottom: 9px;
+}
+
+div#Page div#Content.video-player div.article-foot div.media-box.double-tab-box h3 {
+	margin-left: 0;	
+}
+
+div#Page div#Content.video-player div.article-foot div.related-box {
+	float: left;
+	margin: 0 10px 0 40px;
+}
+
+div#Page div#Content.video-player div.article-foot div.related-box,
+div#Page div#Content.video-player div.article-foot div.related-box dl {
+	width: 215px;	
+}
+
+div#Page div#Content.video-player div.article-foot div.related-box-2,
+div#Page div#Content.video-player div.article-foot div.related-box-2 dl {
+	width: 180px;	
+}
+
+/*
+	Video Player
+*/
+
+div#VideoPlayer {
+	width: 100%;
+	position: relative;
+	padding-bottom: 17px;
+	margin-bottom: 10px;
+	background: url("Highligh.png") -20px 271px no-repeat;		
+}
+
+div#VideoPlayer a.flash {
+	color: #053d88;
+	text-decoration: underline;
+}
+
+div#VideoPlayer > a {
+	position: absolute;
+	top: -30px;
+	z-index: 9999;
+	right: 262px;
+	text-decoration: none;
+	font-size: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #666666;
+	font-style: italic;
+	font-weight: bold;
+	line-height: 27px;
+	padding-top: 2px;	
+}
+
+div#VideoPlayer > a:hover {
+	text-decoration: none;
+}
+
+div#VideoPlayer > a span {
+	font-weight: normal;
+	font-style: normal;
+	top: 0px;
+	padding-top: 2px;
+}
+
+div#VideoPlayer > a span span {
+	display: inline;
+	position: relative;
+	float: right;
+	top: -2px;
+}
+
+div#VideoPlayer a:hover {
+	text-decoration: none;
+}
+
+div#VideoPlayer a:focus {
+	outline: none;
+}
+
+div#VideoPlayer .player-container {
+	width: 476px;
+	height: 268px;
+	margin-left: -10px;
+	padding: 1px;
+	border: 1px #c5c5c4 solid;
+	margin-right: 19px;
+	margin-bottom: 15px;
+	float: left;
+	display: block;
+}
+
+@-moz-document url-prefix() {
+	div#VideoPlayer {
+		background-position: -20px 271px;			
+	}
+	
+	div#VideoPlayer .player-container {
+		height: 268px;	
+	}
+	
+	div#VideoPlayer object#player-container {
+		height: 268px;
+	}
+}
+
+div#VideoPlayer div.video-description {
+	float: left;
+	width: 229px;
+}
+
+div#VideoPlayer div.video-description p,
+div#VideoPlayer p {
+	margin: 0 0 20px 0;
+	color: #40403d;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+div#VideoPlayer div.video-description p:first-child:first-letter,
+div#VideoPlayer script + p:first-letter {
+	float: left;
+	margin: 6px 0 0 0;
+	color: #40403d;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 41px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	div#VideoPlayer div.video-description p:first-child:first-letter,
+	div#VideoPlayer script + p:first-letter {
+		margin: 10px 0 0 0;
+	}
+}

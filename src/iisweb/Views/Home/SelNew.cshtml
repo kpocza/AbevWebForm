@@ -1,0 +1,33 @@
+﻿@model FormHost.Web.Models.HomeNewFormModel
+
+@{
+    ViewBag.Title = "Új kitöltés";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+@section selmenuitem
+{
+<script type="text/javascript">
+    function selectmenuitem() {
+        sh(0);
+    }
+</script>
+}
+
+@section form {
+@if (Model.OrganizationsView)
+{
+    foreach (var org in Model.Organizations)
+    {
+        @Html.ActionLink(org.Name, "SelNew", new { Id = org.Id });<br />
+    }
+}
+else
+{
+    foreach (var dtv in Model.DocTypeVersions)
+    {
+        @Html.ActionLink(dtv.DocumentType.Name + " (" + dtv.VersionString + ")", "Index", "Form", new { Id = dtv.Id }, null); <br />
+    }
+    @Html.RouteLink("Vissza", new { action = "", controller = "Home" });
+}
+}

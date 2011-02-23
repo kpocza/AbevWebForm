@@ -1,0 +1,12 @@
+# User-specific files
+*.suo
+*.user
+*.vspscc
+*.vssscc
+
+**/bin/**
+**/obj/**
+**/out/**
+!Tools/**
+
+TestResults/*

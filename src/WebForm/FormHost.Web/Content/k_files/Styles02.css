@@ -1,0 +1,22 @@
+@charset "utf-8";
+/*
+	Hungarian version
+*/
+
+div#Header h1 a span { background-image: url("logo_gov.png"); }
+div#Header h1 a span img { position: absolute; left: 10px; top: 12px; display: none; }
+div#Header ul.navigation li a span { background-image: url("sprite_m.png"); }
+div#Header ul.navigation li.navigation-1 a { width: 156px; }
+div#Header ul.navigation li.navigation-2 a { width: 196px; }
+div#Header ul.navigation li.navigation-3 a { width: 199px; }
+div#Header ul.navigation li.navigation-4 a { width: 146px; }
+div#Header ul.navigation li.navigation-1.navigation-active a { width: 201px; }
+div#Header ul.navigation li.navigation-2.navigation-active a { width: 254px; }
+div#Header ul.navigation li.navigation-3.navigation-active a { width: 258px; }
+div#Header ul.navigation li.navigation-4.navigation-active a { width: 186px; }
+div#Header ul.navigation li.navigation-4 i.beta { background: url("sprite_l.png") no-repeat; background-position: 0 0; }
+
+body.Theme-State div#TopBar div.topbar div.menu {
+	background-position: -36px 0;
+}
+

@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section menu {
+<!-- TopBar end -->
+
+<div id="Header" class="wrap">
+    <h1><a href="" class="fir">Kormányzati Portál<span></span></a></h1>
+    <ul class="navigation">
+        <li id="m1" class="navigation-1 navigation-active"><a id="l1" href="@Url.Action("SelNew", "Home")" title="Új kitöltés" class="fir">Új kitöltés<span></span></a></li>
+        <li id="m2" class="navigation-2"><a id="l2" href="@Url.Action("SelEdit", "Home")" title="Kitöltés folytatása" class="fir">Kitöltés folytatása<span></span></a></li>
+        <li id="m3" class="navigation-3"><a id="l3" href="#" title="Beküldés" class="fir">Beküldés<span></span></a></li>
+    </ul>
+</div>
+<script type="text/javascript">
+    function sh(idx) {
+        var arr = [$("#m1"), $("#m2"), $("#m3")];
+        for (var i = 0; i < 3; i++) {
+            if (i == idx) {
+                arr[i].addClass("navigation-active");
+            }
+            else {
+                arr[i].removeClass("navigation-active");
+            }
+        }
+    }
+    $(document).ready(function () {
+        $("#l1").click(function () { sh(0); });
+        $("#l2").click(function () { sh(1); });
+        $("#l3").click(function () { sh(2); });
+        selectmenuitem();
+    });
+</script>
+<!-- Header end -->
+@RenderSection("selmenuitem")
+}
+
+
+@section form{
+    @RenderSection("form", false)
+}

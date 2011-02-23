@@ -1,0 +1,25 @@
+﻿@model FormHost.Web.Models.HomeSelModel
+
+@{
+    ViewBag.Title = "Kitöltés folytatása";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+@section selmenuitem
+{
+<script type="text/javascript">
+    function selectmenuitem() {
+        sh(1);
+    }
+</script>
+}
+
+@section form {
+<h2>Melyik kitöltést kívánja folytatni?</h2>
+@{
+    foreach (var f in Model.Fills)
+    {
+        @Html.ActionLink(f.ActualVersion.DocumentType.Name + " (" + f.ActualVersion.VersionString + ")", "Index", "Form", new { Id = f.ActualVersion.Id, fillId = f.Id }, null);<br />
+    }
+}
+}
